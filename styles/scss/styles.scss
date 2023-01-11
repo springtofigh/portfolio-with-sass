@@ -1,0 +1,206 @@
+@import 'mixins';
+@import 'variables';
+
+
+* {
+    @include overal;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 75px;
+}
+
+body {
+    font-weight: 400;
+    overflow-x: hidden;
+    position: relative;
+    background-color: $bgColor;
+    color: $textColor;
+    font-family: 'Centra', sans-serif;
+}
+
+.nav-container {
+    width: 100%;
+    padding: 1.5rem 2.7rem;
+    position: fixed;
+    top: 0;
+    z-index: 30;
+    
+    .logo-img {
+        img {
+            width: 80%;
+        }
+    }
+
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .nav-items {
+        display: flex;
+        align-items: center;
+        // gap: 2rem;
+
+        ul {
+            display: flex;
+            list-style: none;
+
+            li {
+            padding-inline: 1.5rem;
+            }
+
+            a {
+                font-size: 1rem;
+                font-weight: 400;
+                padding: 0.5rem;
+                color: $textColor;
+                text-decoration: none;
+                opacity: 0.5;
+            }
+        }
+    }
+}
+
+.nav-social-icons {
+    margin-left: 0.8rem;
+
+    a {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        border: 1px solid #ffffff80;
+        border-radius: 50%;
+        background: #d9d9d91a;
+
+        &::before {
+            content: "";
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            background-color: $textColor;
+            border-radius: 50%;
+            transform: scale(0);
+            transition: 0.3s ease-in-out;
+        }
+
+        &:hover::before {
+            transform: scale(1);
+        }
+
+        &:hover img {
+            filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
+        }
+    }
+}
+
+.nav-button-container {
+    button {
+        font-size: 0.9rem;
+        font-weight: 700;
+        padding: 18px 34px;
+        color: $textColor;
+        border: 1px solid #fff;
+        position: relative;
+        background: transparent;
+        cursor: pointer;
+
+        &::before {
+            content: "";
+            width: 0%;
+            height: 100%;
+            position: absolute;
+            background-color: #fff;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            transition: 0.3s ease-in-out;
+        }
+
+        &:hover {
+            color: $bgColor;
+        }
+    
+        &:hover::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute; 
+    }
+}
+    margin-left: 0.9rem;
+}
+
+.home {
+    margin-top: 0;
+    padding: 260px 2.7rem 100px 2.7rem;
+    background-image: url('../../assets/img/banner-bg.png');
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .home-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .home-content {
+        text-align: right;
+        margin-right: 7rem;
+        width: 96%;
+
+        .tagline {
+            font-weight: 700;
+            font-size: 1.1rem;
+            padding: 8px 10px;
+            letter-spacing: 0.8px;
+            margin-bottom: 1rem;
+            display: inline-block;
+            background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        h1 {
+            font-size: 70px;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            line-height: 1;
+            margin-bottom: 1.2rem;
+            display: block;
+        }
+
+        p {
+            color: #B8B8B8;
+            font-size: 18px;
+            line-height: 1.5em;
+            // width: 96%;
+            text-align: right;
+        }
+    }
+
+
+
+    img {
+        @include image;
+        animation: updown 3s linear infinite;
+    }
+    @keyframes updown {
+        0% {
+            transform: translateY(-20px);
+        }
+        50% {
+            transform: translateY(20px);
+        }
+        100% {
+            transform: translateY(-20px);
+        }
+    
+}
+
+}
