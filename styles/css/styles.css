@@ -340,4 +340,20 @@ body {
   width: 100%;
 }
 
+.footer {
+  padding: 0 2.7rem 50px 2.7rem;
+  background-image: url("../../assets/img/footer-bg.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.footer .newsletter-box {
+  background: #fff;
+  border-radius: 55px;
+  color: #121212;
+  padding: 85px 125px;
+  margin-bottom: 80px;
+  margin-top: -122px;
+}
+
 /*# sourceMappingURL=styles.css.map */

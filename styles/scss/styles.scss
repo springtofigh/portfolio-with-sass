@@ -405,3 +405,20 @@ body {
         }
     }
 }
+
+.footer {
+    padding: 0 2.7rem 50px 2.7rem;
+    background-image: url('../../assets/img/footer-bg.png');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .newsletter-box {
+        background: $textColor;
+        border-radius: 55px;
+        color: $bgColor;
+        padding: 85px 125px;
+        margin-bottom: 80px;
+        margin-top: -122px;
+    }
+}
