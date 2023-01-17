@@ -4,6 +4,7 @@
 
 * {
     @include overal;
+    font-family: 'Shabnam';
 }
 
 html {
@@ -31,6 +32,10 @@ body {
         img {
             width: 80%;
         }
+    }
+
+    .navbarScrolled {
+        background-color: $bgColor;
     }
 
 }
@@ -203,4 +208,171 @@ body {
     
 }
 
+}
+
+.skills {
+    padding: 0 2.7rem;
+    position: relative;
+    margin-top: -60px;
+    margin-bottom: 3rem;
+
+    .skills-box {
+            background: #151515;
+            padding: 60px 50px;
+            text-align: center;
+            border-radius: 2.3rem;
+            
+
+            h2 {
+                font-size: 2.5rem;
+                font-weight: 700;
+            }
+
+            p {
+                color: #B8B8B8;
+                font-size: 1rem;
+                line-height: 1.5em;
+                margin: 1rem 0 5rem 0;
+            }
+    }
+
+    .skills-percent {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+}
+
+    .skills-bg-image {
+        position: absolute;
+        bottom: 0;
+        top: 27%;
+        left: 0;
+        width: 40%;
+        z-index: -4;
+    }
+
+}
+
+.projects {
+    padding: 80px 0;
+    position: relative;
+    background-color: #000;
+
+    .projects-container {
+
+        .project-content {
+        
+            h2 {
+                font-size: 2.5rem;
+                font-weight: 700;
+                text-align: center;
+            }
+    
+            p {
+                color: #B8B8B8;
+                font-size: 1rem;
+                line-height: 1.5em;
+                margin: 1rem auto 1.8rem auto;
+                text-align: center;
+                width: 56%;
+            }
+        }
+
+        .tabs {
+            width: 72%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid #FFF;
+            background-color: #ffffff1a;
+            border-radius: 50px;
+            overflow: hidden;
+
+            div {
+                background-color: transparent;
+                color: $textColor;
+                padding: 20px 0;
+                width: 100%;
+                font-size: 1rem;
+                font-weight: 500;
+                position: relative;
+                transition: 0.3s ease-in-out;
+                text-align: center;
+                z-index: 0;
+                cursor: pointer;
+
+                &:nth-child(2) {
+                border-right: 1px solid rgba(255, 255, 255, 1);
+                border-left: 1px solid rgba(255, 255, 255, 1);
+                }
+
+                &:active {
+                    background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+                }
+            }
+        }
+    }
+}
+
+.contact {
+    padding:4rem 2.7rem 11rem 2.7rem;
+    background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+
+    .contact-container {
+        display: flex;
+        justify-content: space-between;
+        // align-items: flex-start;
+
+        .contact-img{
+            img {
+                width: 82%;
+            }
+        }
+
+        .contact-form {
+            h2 {
+                font-size: 2rem;
+                font-weight: 700;
+                margin-bottom: 1.8rem;
+                text-align: right;
+            }
+
+            form {
+                display: block;
+            }
+
+            input , textarea {
+                width: 100%;
+                font-weight: 500;
+                font-size: 1rem;
+                border: 1px solid #ffffff80;
+                padding: 1rem 1.3rem;
+                margin-bottom: 8px;
+                background: #ffffff1a;
+                color: $textColor;
+                border-radius: 20px;
+                transition: 0.3s ease-in-out;
+
+                &:focus {
+                    background: rgba(255, 255, 255, 1);
+                    color: $bgColor;
+                    outline: none;
+                }
+
+                &::placeholder {
+                    font-size: 1rem;
+                    font-weight: 400;
+                    text-align: right;
+                    color: $textColor;
+                }
+
+                &:focus::placeholder {
+                    color: $bgColor;
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
 }
