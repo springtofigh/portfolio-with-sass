@@ -284,9 +284,6 @@ body {
   margin-bottom: 1.8rem;
   text-align: right;
 }
-.contact .contact-container .contact-form form {
-  display: block;
-}
 .contact .contact-container .contact-form input, .contact .contact-container .contact-form textarea {
   width: 100%;
   font-weight: 500;
@@ -313,6 +310,34 @@ body {
 .contact .contact-container .contact-form input:focus::placeholder, .contact .contact-container .contact-form textarea:focus::placeholder {
   color: #121212;
   opacity: 0.8;
+}
+.contact .contact-container .contact-form button {
+  position: relative;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #000;
+  padding: 14px 48px;
+  margin-top: 25px;
+  background-color: #fff;
+  border-radius: 0;
+  border: none;
+  transition: 0.3s ease-in-out;
+}
+.contact .contact-container .contact-form button::before {
+  content: "";
+  background-color: #121212;
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.3s ease-in-out;
+}
+.contact .contact-container .contact-form button:hover {
+  color: #fff;
+}
+.contact .contact-container .contact-form button:hover::before {
+  width: 100%;
 }
 
 /*# sourceMappingURL=styles.css.map */
