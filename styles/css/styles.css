@@ -19,6 +19,7 @@ body {
   font-family: "Centra", sans-serif;
 }
 
+/************ NAVBAR ************/
 .nav-container {
   width: 100%;
   padding: 1.5rem 2.7rem;
@@ -122,6 +123,7 @@ body {
   position: absolute;
 }
 
+/************ HOME ************/
 .home {
   margin-top: 0;
   padding: 260px 2.7rem 100px 2.7rem;
@@ -163,8 +165,28 @@ body {
   font-size: 18px;
   line-height: 1.5em;
   text-align: right;
+  margin-bottom: 1rem;
 }
-.home img {
+.home .home-content .home-contact {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+.home .home-content .home-contact span {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-left: 10px;
+}
+.home .home-content .home-contact img {
+  width: 35px;
+  height: 35px;
+  padding: 10px;
+  border: 1px solid snow;
+  border-radius: 50%;
+}
+.home .home-img img {
   width: 100%;
   height: auto;
   animation: updown 3s linear infinite;
@@ -181,6 +203,7 @@ body {
   }
 }
 
+/************ SKILLS ************/
 .skills {
   padding: 0 2.7rem;
   position: relative;
@@ -217,6 +240,7 @@ body {
   z-index: -4;
 }
 
+/************ PROJECTS ************/
 .projects {
   padding: 80px 0;
   position: relative;
@@ -259,14 +283,26 @@ body {
   z-index: 0;
   cursor: pointer;
 }
+.projects .projects-container .tabs div::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: 0.3s ease-in-out;
+}
+.projects .projects-container .tabs div:active::before {
+  width: 100%;
+}
 .projects .projects-container .tabs div:nth-child(2) {
   border-right: 1px solid rgb(255, 255, 255);
   border-left: 1px solid rgb(255, 255, 255);
 }
-.projects .projects-container .tabs div:active {
-  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
-}
 
+/************ CONTACT ************/
 .contact {
   padding: 4rem 2.7rem 11rem 2.7rem;
   background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
@@ -340,6 +376,7 @@ body {
   width: 100%;
 }
 
+/************ FOOTER ************/
 .footer {
   padding: 0 0 50px 0;
   background-image: url("../../assets/img/footer-bg.png");

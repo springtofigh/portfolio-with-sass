@@ -21,6 +21,7 @@ body {
     font-family: 'Centra', sans-serif;
 }
 
+/************ NAVBAR ************/
 .nav-container {
     width: 100%;
     padding: 1.5rem 2.7rem;
@@ -141,6 +142,7 @@ body {
     margin-left: 0.9rem;
 }
 
+/************ HOME ************/
 .home {
     margin-top: 0;
     padding: 260px 2.7rem 100px 2.7rem;
@@ -186,30 +188,53 @@ body {
             line-height: 1.5em;
             // width: 96%;
             text-align: right;
+            margin-bottom: 1rem;
+        }
+
+        .home-contact {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            cursor: pointer;
+
+            span {
+                display: inline-block;
+                font-size: 1rem;
+                font-weight: 500;
+                margin-left: 10px;
+            }
+
+            img {
+                width: 35px;
+                height: 35px;
+                padding: 10px;
+                border: 1px solid snow;
+                border-radius: 50%;
+            }
         }
     }
 
-
-
-    img {
-        @include image;
-        animation: updown 3s linear infinite;
+    .home-img {
+        img {
+            @include image;
+            animation: updown 3s linear infinite;
+        }
+        @keyframes updown {
+            0% {
+                transform: translateY(-20px);
+            }
+            50% {
+                transform: translateY(20px);
+            }
+            100% {
+                transform: translateY(-20px);
+            }
     }
-    @keyframes updown {
-        0% {
-            transform: translateY(-20px);
-        }
-        50% {
-            transform: translateY(20px);
-        }
-        100% {
-            transform: translateY(-20px);
-        }
-    
 }
 
 }
 
+/************ SKILLS ************/
 .skills {
     padding: 0 2.7rem;
     position: relative;
@@ -254,10 +279,11 @@ body {
 
 }
 
+/************ PROJECTS ************/
 .projects {
     padding: 80px 0;
     position: relative;
-    background-color: #000;
+    background-color: $colorDark;
 
     .projects-container {
 
@@ -303,19 +329,46 @@ body {
                 z-index: 0;
                 cursor: pointer;
 
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 0;
+                    height: 100%;
+                    background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+                    top: 0;
+                    left: 0;
+                    z-index: -1;
+                    transition: 0.3s ease-in-out;
+                }
+
+                &:active::before {
+                    width: 100%;
+                }
+
+                // &::before {
+                //     content: "";
+                //     background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+                //     opacity: 0.85;
+                //     position: absolute;
+                //     width: 100%;
+                //     height: 0;
+                //     transition: 0.4s ease-in-out;
+                // }
+    
+                // &:hover::before {
+                //     height: 100%;
+                // }
+
                 &:nth-child(2) {
                 border-right: 1px solid rgba(255, 255, 255, 1);
                 border-left: 1px solid rgba(255, 255, 255, 1);
-                }
-
-                &:active {
-                    background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
                 }
             }
         }
     }
 }
 
+/************ CONTACT ************/
 .contact {
     padding:4rem 2.7rem 11rem 2.7rem;
     background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
@@ -374,7 +427,7 @@ body {
                 position: relative;
                 font-size: 1.1rem;
                 font-weight: 700;
-                color: #000;
+                color: $colorDark;
                 padding: 14px 48px;
                 margin-top: 25px;
                 background-color: $textColor;
@@ -406,6 +459,7 @@ body {
     }
 }
 
+/************ FOOTER ************/
 .footer {
     padding: 0 0 50px 0;
     background-image: url('../../assets/img/footer-bg.png');
