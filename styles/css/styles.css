@@ -79,35 +79,6 @@ body {
   height: 100%;
   position: absolute;
 }
-.navbar .nav-items .social-icons {
-  margin-left: 0.8rem;
-}
-.navbar .nav-items .social-icons a {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  border: 1px solid rgba(255, 255, 255, 0.5019607843);
-  border-radius: 50%;
-  background: rgba(217, 217, 217, 0.1019607843);
-}
-.navbar .nav-items .social-icons a::before {
-  content: "";
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  background-color: #fff;
-  border-radius: 50%;
-  transform: scale(0);
-  transition: 0.3s ease-in-out;
-}
-.navbar .nav-items .social-icons a:hover::before {
-  transform: scale(1);
-}
-.navbar .nav-items .social-icons a:hover img {
-  filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
-}
 .navbar .nav-items .items-container ul {
   display: flex;
   list-style: none;
@@ -122,6 +93,36 @@ body {
   color: #fff;
   text-decoration: none;
   opacity: 0.5;
+}
+
+.social-icons {
+  margin-left: 0.8rem;
+}
+.social-icons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.5019607843);
+  border-radius: 50%;
+  background: rgba(217, 217, 217, 0.1019607843);
+}
+.social-icons a::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  background-color: #fff;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 0.3s ease-in-out;
+}
+.social-icons a:hover::before {
+  transform: scale(1);
+}
+.social-icons a:hover img {
+  filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
 }
 
 /************ HOME ************/
@@ -375,12 +376,13 @@ body {
   font-size: 1.1rem;
   font-weight: 700;
   color: #000;
-  padding: 14px 48px;
+  padding: 1rem 2.4rem;
   margin-top: 25px;
-  background-color: #fff;
+  background: #fff;
   border-radius: 0;
   border: none;
   transition: 0.3s ease-in-out;
+  z-index: 20;
 }
 .contact .contact-container .contact-form button:hover {
   color: #fff;
@@ -393,7 +395,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: -1;
   transition: 0.3s ease-in-out;
 }
 .contact .contact-container .contact-form button:hover::before {
