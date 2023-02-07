@@ -325,21 +325,26 @@ body {
   padding: 4rem 2.7rem 11rem 2.7rem;
   background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
 }
-.contact .contact-container {
-  display: flex;
-  justify-content: space-between;
-}
-.contact .contact-container .contact-img img {
-  width: 82%;
-}
-.contact .contact-container .contact-form h2 {
+.contact h2 {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 1.8rem;
   text-align: right;
 }
-.contact .contact-container .contact-form input, .contact .contact-container .contact-form textarea {
+.contact .contact-container {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.contact .contact-container .contact-form {
+  width: 70%;
+  display: flex;
+}
+.contact .contact-container .contact-form textarea {
+  width: 88%;
+}
+.contact .contact-container .contact-form .fields-styles {
   font-weight: 500;
   font-size: 1rem;
   border: 1px solid rgba(255, 255, 255, 0.5019607843);
@@ -350,18 +355,18 @@ body {
   border-radius: 20px;
   transition: 0.3s ease-in-out;
 }
-.contact .contact-container .contact-form input:focus, .contact .contact-container .contact-form textarea:focus {
+.contact .contact-container .contact-form .fields-styles:focus {
   background: rgb(255, 255, 255);
   color: #121212;
   outline: none;
 }
-.contact .contact-container .contact-form input::placeholder, .contact .contact-container .contact-form textarea::placeholder {
+.contact .contact-container .contact-form .fields-styles::placeholder {
   font-size: 1rem;
   font-weight: 400;
   text-align: right;
   color: #fff;
 }
-.contact .contact-container .contact-form input:focus::placeholder, .contact .contact-container .contact-form textarea:focus::placeholder {
+.contact .contact-container .contact-form .fields-styles:focus::placeholder {
   color: #121212;
   opacity: 0.8;
 }
@@ -377,21 +382,25 @@ body {
   border: none;
   transition: 0.3s ease-in-out;
 }
+.contact .contact-container .contact-form button:hover {
+  color: #fff;
+}
 .contact .contact-container .contact-form button::before {
   content: "";
-  background-color: #121212;
+  background: #121212;
   width: 0;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 1;
   transition: 0.3s ease-in-out;
-}
-.contact .contact-container .contact-form button:hover {
-  color: #fff;
 }
 .contact .contact-container .contact-form button:hover::before {
   width: 100%;
+}
+.contact .contact-container .contact-img img {
+  width: 92%;
 }
 
 /************ FOOTER ************/

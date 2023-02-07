@@ -378,20 +378,6 @@ body {
                     width: 100%;
                 }
 
-                // &::before {
-                //     content: "";
-                //     background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
-                //     opacity: 0.85;
-                //     position: absolute;
-                //     width: 100%;
-                //     height: 0;
-                //     transition: 0.4s ease-in-out;
-                // }
-    
-                // &:hover::before {
-                //     height: 100%;
-                // }
-
                 &:nth-child(2) {
                 border-right: 1px solid rgba(255, 255, 255, 1);
                 border-left: 1px solid rgba(255, 255, 255, 1);
@@ -406,27 +392,28 @@ body {
     padding:4rem 2.7rem 11rem 2.7rem;
     background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
 
-    .contact-container {
-        display: flex;
-        justify-content: space-between;
-        // align-items: flex-start;
+    h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1.8rem;
+        text-align: right;
+    }
 
-        .contact-img{
-            img {
-                width: 82%;
-            }
-        }
+    .contact-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
 
         .contact-form {
-            h2 {
-                font-size: 2rem;
-                font-weight: 700;
-                margin-bottom: 1.8rem;
-                text-align: right;
+            width: 70%;
+            display: flex;
+
+            textarea {
+                width: 88%;
             }
 
-            input , textarea {
-                width: 100%;
+            .fields-styles {
                 font-weight: 500;
                 font-size: 1rem;
                 border: 1px solid #ffffff80;
@@ -468,19 +455,20 @@ body {
                 border: none;
                 transition: 0.3s ease-in-out;
 
+                &:hover {
+                    color: $textColor;
+                }
+
                 &::before {
                     content: "";
-                    background-color: $bgColor;
+                    background: $bgColor;
                     width: 0;
                     height: 100%;
                     position: absolute;
                     top: 0;
                     left: 0;
+                    z-index: 1;
                     transition: 0.3s ease-in-out;
-                }
-
-                &:hover {
-                    color: $textColor;
                 }
 
                 &:hover::before {
@@ -488,6 +476,13 @@ body {
                     
                 }
             }
+        }
+
+        .contact-img{
+            img {
+                width: 92%;
+            }
+            
         }
     }
 }
