@@ -192,7 +192,7 @@ body {
             line-height: 1.5em;
             // width: 96%;
             text-align: right;
-            margin-bottom: 1rem;
+            margin-bottom: 2.5rem;
         }
 
         .typing-effect {
@@ -406,8 +406,40 @@ body {
                                 &:hover::before {
                                     height: 100%;
                                 }
+
+                                .overlay {
+                                    position: absolute;
+                                    text-align: center;
+                                    top: 0;
+                                    bottom: 0;
+                                    left: 0;
+                                    right: 0;
+                                    height: 100%;
+                                    width: 100%;
+                                    opacity: 0;
+                                    transition: .5s ease;
+
+                                    &:hover {
+                                        top: 40%;
+                                        opacity: 1;
+                                }
+
+                                h4 {
+                                    font-size: 30px;
+                                    font-weight: 700;
+                                    letter-spacing: 0.8px;
+                                    line-height: 1.1em;
+                                }
+
+                                span {
+                                    font-style: italic;
+                                    font-weight: 400;
+                                    font-size: 0.8rem;
+                                    letter-spacing: 0.8px;
+                                }
+                            }
+
                         }
-                        
                         img {
                             width: 100%;
                         }

@@ -167,7 +167,7 @@ body {
   font-size: 18px;
   line-height: 1.5em;
   text-align: right;
-  margin-bottom: 1rem;
+  margin-bottom: 2.5rem;
 }
 .home .home-content .typing-effect {
   width: 100%;
@@ -346,6 +346,34 @@ body {
 }
 .projects .projects-container .projects-images .projects-img:hover::before {
   height: 100%;
+}
+.projects .projects-container .projects-images .projects-img .overlay {
+  position: absolute;
+  text-align: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+}
+.projects .projects-container .projects-images .projects-img .overlay:hover {
+  top: 40%;
+  opacity: 1;
+}
+.projects .projects-container .projects-images .projects-img .overlay h4 {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 1.1em;
+}
+.projects .projects-container .projects-images .projects-img .overlay span {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 0.8rem;
+  letter-spacing: 0.8px;
 }
 .projects .projects-container .projects-images img {
   width: 100%;
