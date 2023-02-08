@@ -261,8 +261,11 @@ body {
 
 /************ PROJECTS ************/
 .projects {
-  padding: 80px 0;
+  padding: 80px 2.7rem;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #000;
 }
 .projects .projects-container .project-content h2 {
@@ -288,6 +291,7 @@ body {
   background-color: rgba(255, 255, 255, 0.1019607843);
   border-radius: 50px;
   overflow: hidden;
+  margin-bottom: 2.5rem;
 }
 .projects .projects-container .tabs div {
   background-color: transparent;
@@ -297,8 +301,8 @@ body {
   font-size: 1rem;
   font-weight: 500;
   position: relative;
-  transition: 0.3s ease-in-out;
   text-align: center;
+  transition: 0.3s ease-in-out;
   z-index: 0;
   cursor: pointer;
 }
@@ -319,6 +323,32 @@ body {
 .projects .projects-container .tabs div:nth-child(2) {
   border-right: 1px solid rgb(255, 255, 255);
   border-left: 1px solid rgb(255, 255, 255);
+}
+.projects .projects-container .projects-images {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.projects .projects-container .projects-images .projects-img {
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+}
+.projects .projects-container .projects-images .projects-img::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  opacity: 0.85;
+  width: 100%;
+  height: 0;
+  transition: 0.4s ease-in-out;
+}
+.projects .projects-container .projects-images .projects-img:hover::before {
+  height: 100%;
+}
+.projects .projects-container .projects-images img {
+  width: 100%;
 }
 
 /************ CONTACT ************/
@@ -487,6 +517,7 @@ body {
 }
 .footer .footer-container .footer-items .social-icons {
   margin-bottom: 1rem;
+  margin-left: 0;
 }
 
 /*# sourceMappingURL=styles.css.map */
