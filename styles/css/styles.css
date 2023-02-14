@@ -250,6 +250,9 @@ body {
   justify-content: space-around;
   align-items: center;
 }
+.skills .skills-percent img {
+  width: 75%;
+}
 .skills .skills-bg-image {
   position: absolute;
   bottom: 0;
