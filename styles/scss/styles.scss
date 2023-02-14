@@ -289,15 +289,48 @@ body {
         justify-content: space-around;
         align-items: center;
 
-        img {
-            width: 75%;
+}
+
+.swiper {
+    height: 250px;
+
+        .swiper-wrapper {
+            align-items: center;
         }
 
-        // .swiper-slide {
-        //     width: 50%;
-        //     height: 50%;
+        .swiper-slide {
+            img {
+            width: 80%;
+            height: 80%;
+        }
+    }
+    .prev,
+    .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: 0.2s;
+        opacity: 0.65;
+        cursor: pointer;
+        z-index: 30;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        // svg {
+        //     width: 20px;
+        //     height: 20px;
+        // }
+        
+        // .prev {
+        //   left: 25px;
+        // }
+        // .next {
+        //   right: 25px;
         // }
 
+}
 }
 
     .skills-bg-image {

@@ -6,19 +6,18 @@ const navbarScroll = () => {
 
 window.addEventListener('scroll', navbarScroll);
 
-// const swiper = new Swiper('.swiper', {
-//     spaceBetween: 30,
-//     centeredSlides: true,
-//     autoplay: {
-//       delay: 2400,
-//       disableOnInteraction: false,
-//     },
-//     pagination: {
-//       el: ".swiper-pagination",
-//       clickable: true,
-//     },
-//     navigation: {
-//       nextEl: ".swiper-button-next",
-//       prevEl: ".swiper-button-prev",
-//     },
-//   });
+const swiper = new Swiper(".swiper", {
+    slidesPerView: 3,
+    loop: true,
+    grabCursor: true,
+    centeredSlides: true,
+    slideActiveClass: "active",
+    navigation: {
+        nextEl: ".next",
+        prevEl: ".prev"
+    },
+    autoplay: {
+        enabled: true,
+        delay: 5000
+    },
+});

@@ -250,8 +250,29 @@ body {
   justify-content: space-around;
   align-items: center;
 }
-.skills .skills-percent img {
-  width: 75%;
+.skills .swiper {
+  height: 250px;
+}
+.skills .swiper .swiper-wrapper {
+  align-items: center;
+}
+.skills .swiper .swiper-slide img {
+  width: 80%;
+  height: 80%;
+}
+.skills .swiper .prev,
+.skills .swiper .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.2s;
+  opacity: 0.65;
+  cursor: pointer;
+  z-index: 30;
+}
+.skills .swiper .prev:hover,
+.skills .swiper .next:hover {
+  opacity: 1;
 }
 .skills .skills-bg-image {
   position: absolute;
