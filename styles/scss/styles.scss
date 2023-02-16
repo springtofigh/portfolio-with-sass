@@ -503,7 +503,9 @@ body {
             display: flex;
 
             textarea {
-                width: 88%;
+                width: 570px;
+                display: block;
+                resize: none;
             }
 
             .fields-styles {

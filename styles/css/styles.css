@@ -429,7 +429,9 @@ body {
   display: flex;
 }
 .contact .contact-container .contact-form textarea {
-  width: 88%;
+  width: 570px;
+  display: block;
+  resize: none;
 }
 .contact .contact-container .contact-form .fields-styles {
   font-weight: 500;
