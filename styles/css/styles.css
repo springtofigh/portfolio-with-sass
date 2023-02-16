@@ -245,6 +245,24 @@ body {
   line-height: 1.5em;
   margin: 1rem 0 5rem 0;
 }
+.skills .skills-box .prev,
+.skills .skills-box .next {
+  position: absolute;
+  top: 70%;
+  background: rgba(5, 5, 5, 0.6);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  line-height: 50px;
+  cursor: pointer;
+  z-index: 30;
+}
+.skills .skills-box .prev {
+  left: 12%;
+}
+.skills .skills-box .next {
+  right: 12%;
+}
 .skills .skills-percent {
   display: flex;
   justify-content: space-around;
@@ -259,20 +277,6 @@ body {
 .skills .swiper .swiper-slide img {
   width: 80%;
   height: 80%;
-}
-.skills .swiper .prev,
-.skills .swiper .next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: 0.2s;
-  opacity: 0.65;
-  cursor: pointer;
-  z-index: 30;
-}
-.skills .swiper .prev:hover,
-.skills .swiper .next:hover {
-  opacity: 1;
 }
 .skills .skills-bg-image {
   position: absolute;
