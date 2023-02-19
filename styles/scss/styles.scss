@@ -180,7 +180,6 @@ body {
         h1 {
             font-size: 70px;
             font-weight: 700;
-            letter-spacing: 0.8px;
             line-height: 1;
             margin-bottom: 1.2rem;
             display: block;
@@ -503,7 +502,8 @@ body {
             display: flex;
 
             textarea {
-                width: 570px;
+                // width: 570px;
+                width: 88%;
                 display: block;
                 resize: none;
             }
@@ -680,4 +680,106 @@ body {
             }
         }
     }
+}
+
+// Media Queries
+@include media(S) {
+    .nav-container {
+
+        .navbar {
+            flex-direction: column-reverse;
+    
+            .logo-img {
+                margin-inline: auto;
+            }
+    
+            .nav-items {
+                flex-direction: column-reverse;
+    
+                .items-container  {
+    
+                    margin: 1rem 0;
+    
+                    ul {
+                        display: block;
+                    }
+                    
+                }
+            }
+    
+            .social-icons {
+                display: none;
+            }
+    
+        }
+
+
+    }
+
+    .home {
+        .home-container {
+            flex-direction: column;
+        }
+
+        .home-content {
+
+            .tagline {
+                font-weight: 300;
+            }
+
+            h1 {
+                font-size: 35px;
+                font-weight: 500;
+            }
+
+            p {
+                text-align: justify;
+            }
+
+        }
+
+    }
+
+    // .skills {
+    
+    //     .skills-box {
+            
+    //     }
+    // }
+
+    .projects-container {
+        flex-direction: column;
+
+        .projects-tabs {
+            .tabs {
+                font-size: 17px;
+                font-weight: 500;
+            }
+        }
+
+        .projects-images {
+            // flex-direction: column;
+            justify-content: space-around;
+            flex-wrap: wrap;
+
+        }
+
+    }
+
+
+    .contact {
+        flex-direction: column;
+    }
+
+
+    .footer-container {
+
+        .contact-container {
+            flex-wrap: wrap;
+        }
+
+
+    }
+
+
 }

@@ -157,7 +157,6 @@ body {
 .home .home-content h1 {
   font-size: 70px;
   font-weight: 700;
-  letter-spacing: 0.8px;
   line-height: 1;
   margin-bottom: 1.2rem;
   display: block;
@@ -429,7 +428,7 @@ body {
   display: flex;
 }
 .contact .contact-container .contact-form textarea {
-  width: 570px;
+  width: 88%;
   display: block;
   resize: none;
 }
@@ -576,6 +575,57 @@ body {
 .footer .footer-container .footer-items .social-icons {
   margin-bottom: 1rem;
   margin-left: 0;
+}
+
+@media (max-width: 480px) {
+  .nav-container .navbar {
+    flex-direction: column-reverse;
+  }
+  .nav-container .navbar .logo-img {
+    margin-inline: auto;
+  }
+  .nav-container .navbar .nav-items {
+    flex-direction: column-reverse;
+  }
+  .nav-container .navbar .nav-items .items-container {
+    margin: 1rem 0;
+  }
+  .nav-container .navbar .nav-items .items-container ul {
+    display: block;
+  }
+  .nav-container .navbar .social-icons {
+    display: none;
+  }
+  .home .home-container {
+    flex-direction: column;
+  }
+  .home .home-content .tagline {
+    font-weight: 300;
+  }
+  .home .home-content h1 {
+    font-size: 35px;
+    font-weight: 500;
+  }
+  .home .home-content p {
+    text-align: justify;
+  }
+  .projects-container {
+    flex-direction: column;
+  }
+  .projects-container .projects-tabs .tabs {
+    font-size: 17px;
+    font-weight: 500;
+  }
+  .projects-container .projects-images {
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .contact {
+    flex-direction: column;
+  }
+  .footer-container .contact-container {
+    flex-wrap: wrap;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
