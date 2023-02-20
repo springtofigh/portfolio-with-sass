@@ -79,6 +79,9 @@ body {
   height: 100%;
   position: absolute;
 }
+.navbar .nav-items i {
+  display: none;
+}
 .navbar .nav-items .items-container ul {
   display: flex;
   list-style: none;
@@ -426,9 +429,10 @@ body {
 .contact .contact-container .contact-form {
   width: 70%;
   display: flex;
+  flex-direction: column;
 }
 .contact .contact-container .contact-form textarea {
-  width: 88%;
+  width: 100%;
   display: block;
   resize: none;
 }
@@ -578,26 +582,29 @@ body {
 }
 
 @media (max-width: 480px) {
-  .nav-container .navbar {
-    flex-direction: column-reverse;
+  .nav-container .nav-items .nav-button-container {
+    display: none;
   }
-  .nav-container .navbar .logo-img {
-    margin-inline: auto;
+  .nav-container .nav-items i {
+    display: flex;
+  }
+  .nav-container .navbar .logo-img img {
+    width: 50%;
   }
   .nav-container .navbar .nav-items {
     flex-direction: column-reverse;
   }
   .nav-container .navbar .nav-items .items-container {
-    margin: 1rem 0;
-  }
-  .nav-container .navbar .nav-items .items-container ul {
-    display: block;
+    display: none;
   }
   .nav-container .navbar .social-icons {
     display: none;
   }
   .home .home-container {
-    flex-direction: column;
+    flex-direction: column-reverse;
+  }
+  .home .home-content {
+    margin-right: 0;
   }
   .home .home-content .tagline {
     font-weight: 300;
@@ -620,11 +627,29 @@ body {
     justify-content: space-around;
     flex-wrap: wrap;
   }
-  .contact {
-    flex-direction: column;
+  .contact .contact-container {
+    flex-direction: column-reverse;
   }
-  .footer-container .contact-container {
-    flex-wrap: wrap;
+  .contact .contact-container .contact-form {
+    width: 100%;
+  }
+  .contact .contact-container .contact-img img {
+    width: 100%;
+  }
+  .footer .newsletter-section .neswletter-text {
+    width: 100%;
+  }
+  .footer .newsletter-section .neswletter-text h3 {
+    font-size: 1rem;
+  }
+  .footer .footer-container {
+    flex-direction: column-reverse;
+  }
+  .footer .footer-container .logo-img {
+    width: 100%;
+  }
+  .footer .footer-container .logo-img img {
+    width: 30%;
   }
 }
 

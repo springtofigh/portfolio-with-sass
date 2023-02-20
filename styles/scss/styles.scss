@@ -89,6 +89,10 @@ body {
             margin-left: 0.9rem;
         }
 
+        i {
+            display: none;
+        }
+
         .items-container {
             ul {
             display: flex;
@@ -500,10 +504,11 @@ body {
         .contact-form {
             width: 70%;
             display: flex;
+            flex-direction: column;
 
             textarea {
                 // width: 570px;
-                width: 88%;
+                width: 100%;
                 display: block;
                 resize: none;
             }
@@ -685,12 +690,24 @@ body {
 // Media Queries
 @include media(S) {
     .nav-container {
+        
+        .nav-items {
+            .nav-button-container {
+            display: none;
+        }
+
+        i {
+            display: flex;
+        }
+        }
+
 
         .navbar {
-            flex-direction: column-reverse;
-    
+            
             .logo-img {
-                margin-inline: auto;
+                img {
+                    width: 50%;
+                }
             }
     
             .nav-items {
@@ -698,11 +715,13 @@ body {
     
                 .items-container  {
     
-                    margin: 1rem 0;
+                    display: none;
+
+                    // margin: 1rem 0;
     
-                    ul {
-                        display: block;
-                    }
+                    // ul {
+                    //     display: block;
+                    // }
                     
                 }
             }
@@ -718,10 +737,12 @@ body {
 
     .home {
         .home-container {
-            flex-direction: column;
+            flex-direction: column-reverse;
         }
 
         .home-content {
+
+            margin-right: 0;
 
             .tagline {
                 font-weight: 300;
@@ -768,18 +789,50 @@ body {
 
 
     .contact {
-        flex-direction: column;
+        
+        .contact-container {
+            flex-direction: column-reverse;
+
+            .contact-form {
+                width: 100%;
+            }
+
+            .contact-img{
+                img {
+                    width: 100%;
+                }
+            }
+
+        }
+        
     }
 
 
-    .footer-container {
+    .footer {
 
-        .contact-container {
-            flex-wrap: wrap;
+        .newsletter-section {
+            .neswletter-text {
+                width: 100%;
+                h3 {
+                font-size: 1rem;
+            }
+            }
+            
         }
 
+            .footer-container {
+                flex-direction: column-reverse;
+
+                .logo-img {
+                    width: 100%;
+                    img {
+                        width: 30%;
+                    }
+                }
 
     }
+    }
+
 
 
 }
