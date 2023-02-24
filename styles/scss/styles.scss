@@ -762,12 +762,22 @@ body {
 
     }
 
-    // .skills {
-    
-    //     .skills-box {
-            
-    //     }
-    // }
+    .skills {
+        .skills-box {
+            padding: 60px 40px;
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .prev,
+            .next {
+                display: none;
+            }
+
+        }
+
+    }
 
     .projects-container {
         flex-direction: column;

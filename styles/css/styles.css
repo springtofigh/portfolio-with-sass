@@ -623,6 +623,16 @@ body {
   .home .home-content p {
     text-align: justify;
   }
+  .skills .skills-box {
+    padding: 60px 40px;
+  }
+  .skills .skills-box h2 {
+    font-size: 1.5rem;
+  }
+  .skills .skills-box .prev,
+.skills .skills-box .next {
+    display: none;
+  }
   .projects-container {
     flex-direction: column;
   }

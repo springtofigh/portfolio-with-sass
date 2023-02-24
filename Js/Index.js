@@ -7,7 +7,7 @@ const navbarScroll = () => {
 window.addEventListener('scroll', navbarScroll);
 
 const swiper = new Swiper(".swiper", {
-    slidesPerView: 3,
+    slidesPerView: 1,
     loop: true,
     grabCursor: true,
     centeredSlides: true,
