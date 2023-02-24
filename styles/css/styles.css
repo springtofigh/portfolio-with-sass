@@ -643,11 +643,15 @@ body {
   .contact .contact-container .contact-img img {
     width: 100%;
   }
-  .footer .newsletter-section .neswletter-text {
-    width: 100%;
+  .footer .newsletter-section {
+    padding: 0 2rem;
   }
-  .footer .newsletter-section .neswletter-text h3 {
-    font-size: 1rem;
+  .footer .newsletter-section .newsletter-box {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .footer .newsletter-section .newsletter-box .neswletter-text h3 {
+    text-align: center;
   }
   .footer .footer-container {
     flex-direction: column-reverse;

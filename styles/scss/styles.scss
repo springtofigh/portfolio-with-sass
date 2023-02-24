@@ -812,11 +812,18 @@ body {
     .footer {
 
         .newsletter-section {
-            .neswletter-text {
-                width: 100%;
-                h3 {
-                font-size: 1rem;
-            }
+            padding: 0 2rem;
+            .newsletter-box {
+                flex-direction: column;
+                gap: 1rem;
+
+                .neswletter-text {
+                    
+                    h3 {
+                        text-align: center;
+                }
+                }
+
             }
             
         }
