@@ -421,7 +421,9 @@ body {
         }
 
         .projects-images {
-                display: flex;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                justify-content: center;
                 align-items: center;
                 gap: 1rem;
                 margin-bottom: 1.5rem;
@@ -792,8 +794,7 @@ body {
         .projects-images {
             // flex-direction: column;
             justify-content: space-around;
-            flex-wrap: wrap;
-
+            // flex-wrap: wrap;
         }
 
     }

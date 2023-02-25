@@ -362,7 +362,9 @@ body {
   border-left: 1px solid rgb(255, 255, 255);
 }
 .projects .projects-container .projects-images {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-content: center;
   align-items: center;
   gap: 1rem;
   margin-bottom: 1.5rem;
@@ -642,7 +644,6 @@ body {
   }
   .projects-container .projects-images {
     justify-content: space-around;
-    flex-wrap: wrap;
   }
   .contact .contact-container {
     flex-direction: column-reverse;
