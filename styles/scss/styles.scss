@@ -509,7 +509,7 @@ body {
 
             textarea {
                 // width: 570px;
-                width: 100%;
+                width: 88%;
                 display: block;
                 resize: none;
             }
@@ -806,6 +806,11 @@ body {
 
             .contact-form {
                 width: 100%;
+
+                textarea {
+                    width: 100%;
+                }
+
             }
 
             .contact-img{
@@ -849,6 +854,87 @@ body {
                 }
 
     }
+    }
+
+
+
+}
+
+@include media(M) {
+
+    .nav-container {
+        
+        .nav-items {
+            .nav-button-container {
+            display: none;
+        }
+
+        i {
+            display: flex;
+        }
+        }
+
+
+        .navbar {
+            
+            .logo-img {
+                img {
+                    width: 70%;
+                }
+            }
+    
+            .nav-items {
+                flex-direction: column-reverse;
+    
+                .items-container  {
+                    display: none;
+                    
+                }
+            }
+    
+            .social-icons {
+                display: none;
+            }
+    
+        }
+
+
+    }
+
+    .home {
+
+        .home-container {
+            flex-direction: column-reverse;
+        }
+
+        .home-content {
+            margin-right: 0;
+            h1 {
+                font-size: 35px;
+                font-weight: 500;
+            }
+        }
+
+    }
+
+    .footer {
+
+        .newsletter-section {
+            padding: 0 2rem;
+            .newsletter-box {
+                flex-direction: column;
+                gap: 1rem;
+
+                .neswletter-text {
+                    
+                    h3 {
+                        text-align: center;
+                }
+                }
+
+            }
+            
+        }
     }
 
 
