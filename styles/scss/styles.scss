@@ -502,16 +502,17 @@ body {
         width: 100%;
         display: flex;
         justify-content: center;
-        align-items: flex-start;
+        align-items: center;
 
         .contact-form {
             width: 70%;
             display: flex;
+            align-items: flex-start;
+            justify-content: center;
             flex-direction: column;
 
             textarea {
-                // width: 570px;
-                width: 88%;
+                width: 100%;
                 display: block;
                 resize: none;
             }
