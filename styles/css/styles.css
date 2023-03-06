@@ -582,6 +582,9 @@ body {
   .nav-container .nav-items i {
     display: flex;
   }
+  .nav-container .navbar .logo-img {
+    text-align: left;
+  }
   .nav-container .navbar .logo-img img {
     width: 50%;
   }
