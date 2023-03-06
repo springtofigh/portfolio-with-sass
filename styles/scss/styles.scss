@@ -383,6 +383,25 @@ body {
             overflow: hidden;
             margin-bottom: 2.5rem;
 
+            .tab-hover {
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+                    top: 0;
+                    left: 0;
+                    z-index: -1;
+                    transition: 0.3s ease-in-out;
+                }
+
+                // &:active::before {
+                //     width: 100%;
+                // }
+
+            }
+
             div {
                 background-color: transparent;
                 color: $textColor;
@@ -396,27 +415,12 @@ body {
                 z-index: 0;
                 cursor: pointer;
 
-                &::before {
-                    content: "";
-                    position: absolute;
-                    width: 0;
-                    height: 100%;
-                    background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
-                    top: 0;
-                    left: 0;
-                    z-index: -1;
-                    transition: 0.3s ease-in-out;
-                }
-
-                &:active::before {
-                    width: 100%;
-                }
-
                 &:nth-child(2) {
                 border-right: 1px solid rgba(255, 255, 255, 1);
                 border-left: 1px solid rgba(255, 255, 255, 1);
                 }
             }
+            
         }
 
         .projects-images {
