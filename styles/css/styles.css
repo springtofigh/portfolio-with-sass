@@ -178,23 +178,6 @@ body {
   text-align: right;
   margin-bottom: 2.5rem;
 }
-.home .home-content .typing-effect {
-  width: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-  border-left: 3px solid #636363;
-  animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
-}
-@keyframes typing {
-  from {
-    width: 0;
-  }
-}
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
-}
 .home .home-content .home-contact {
   display: flex;
   align-items: center;
@@ -646,6 +629,9 @@ body {
   }
   .projects-container .projects-images {
     justify-content: space-around;
+  }
+  .contact {
+    padding: 4rem 1rem 11rem 1rem;
   }
   .contact .contact-container {
     flex-direction: column-reverse;

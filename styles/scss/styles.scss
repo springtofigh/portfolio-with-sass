@@ -199,24 +199,24 @@ body {
             margin-bottom: 2.5rem;
         }
 
-        .typing-effect {
-            width: 100%;
-            overflow: hidden;
-            white-space: nowrap;
-            border-left: 3px solid #636363;
-            animation: typing 2s steps(22), blink .5s step-end infinite alternate;
-        }
-        @keyframes typing {
-            from {
-                width: 0
-            }
-        }
+        // .typing-effect {
+        //     width: 100%;
+        //     overflow: hidden;
+        //     white-space: nowrap;
+        //     border-left: 3px solid #636363;
+        //     animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+        // }
+        // @keyframes typing {
+        //     from {
+        //         width: 0;
+        //     }
+        // }
 
-        @keyframes blink {
-            50% {
-                border-color: transparent
-            }
-        }
+        // @keyframes blink {
+        //     50% {
+        //         border-color: transparent;
+        //     }
+        // }
 
         .home-contact {
             display: flex;
@@ -802,7 +802,7 @@ body {
 
 
     .contact {
-        
+        padding:4rem 1rem 11rem 1rem;
         .contact-container {
             flex-direction: column-reverse;
 
