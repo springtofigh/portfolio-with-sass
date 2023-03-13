@@ -396,6 +396,12 @@ body {
 .projects .projects-container .projects-images img {
   width: 100%;
 }
+.projects .projects-container .tab-two-text {
+  display: none;
+}
+.projects .projects-container .not-show {
+  display: none;
+}
 
 /************ CONTACT ************/
 .contact {
