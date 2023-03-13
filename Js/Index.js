@@ -24,8 +24,11 @@ const swiper = new Swiper(".swiper", {
 });
 
 // ===  Project Section Active Style  ===
-const tabHover = document.querySelector(".tabs div");
-console.log(tabHover);
-tabHover.addEventListener("click" , () => {
-    tabHover.classList.toggle("tab-hover")
-})
+const tabHover = document.querySelectorAll(".tab");
+
+tabHover.forEach(item => item.addEventListener("click" , activeTab));
+
+function activeTab() {
+    tabHover.forEach(item => item.classList.remove("tab-hover"));
+    this.classList.add("tab-hover")
+}

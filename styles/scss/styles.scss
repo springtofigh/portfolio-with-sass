@@ -395,11 +395,6 @@ body {
                     z-index: -1;
                     transition: 0.3s ease-in-out;
                 }
-
-                // &:active::before {
-                //     width: 100%;
-                // }
-
             }
 
             div {
@@ -422,6 +417,7 @@ body {
             }
             
         }
+        
 
         .projects-images {
                 display: grid;
