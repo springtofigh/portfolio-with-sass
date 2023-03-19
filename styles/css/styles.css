@@ -644,6 +644,9 @@ body {
   .contact .contact-container .contact-form {
     width: 100%;
   }
+  .contact .contact-container .contact-form .fields-styles {
+    width: 100%;
+  }
   .contact .contact-container .contact-form textarea {
     width: 100%;
   }
@@ -699,6 +702,19 @@ body {
     font-size: 35px;
     font-weight: 500;
   }
+  .contact .contact-container {
+    flex-direction: column-reverse;
+  }
+  .contact .contact-container .contact-form {
+    width: 100%;
+    justify-content: center;
+  }
+  .contact .contact-container .contact-form .fields-styles {
+    width: 100%;
+  }
+  .contact .contact-container .contact-img img {
+    width: 100%;
+  }
   .footer .newsletter-section {
     padding: 0 2rem;
   }
@@ -708,6 +724,36 @@ body {
   }
   .footer .newsletter-section .newsletter-box .neswletter-text h3 {
     text-align: center;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .home .home-img img {
+    width: 100%;
+    height: auto;
+  }
+  .home .home-content h1 {
+    font-size: 50px;
+    font-weight: 500;
+  }
+  .contact .contact-container .contact-form {
+    width: 70%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .contact .contact-container .contact-form .fields-styles {
+    width: 100%;
+  }
+  .contact .contact-container .contact-form .fields-styles input {
+    width: 50%;
+  }
+  .contact .contact-container .contact-form textarea {
+    width: 100%;
+    resize: none;
+  }
+  .contact .contact-container .contact-img {
+    margin-right: 40px;
   }
 }
 
