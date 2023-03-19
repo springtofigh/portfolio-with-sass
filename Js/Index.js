@@ -7,21 +7,39 @@ const navbarScroll = () => {
 window.addEventListener('scroll', navbarScroll);
 
 // ===  Slider For Skills Section  ===
-const swiper = new Swiper(".swiper", {
-    slidesPerView: 1,
-    loop: true,
-    grabCursor: true,
-    centeredSlides: true,
-    slideActiveClass: "active",
-    navigation: {
-        nextEl: ".next",
-        prevEl: ".prev"
-    },
-    autoplay: {
-        enabled: true,
-        delay: 5000
-    },
-});
+if (window.matchMedia("(max-width: 700px)").matches) {
+    const swiper = new Swiper(".swiper", {
+        slidesPerView: 1,
+        loop: true,
+        grabCursor: true,
+        centeredSlides: true,
+        slideActiveClass: "active",
+        navigation: {
+            nextEl: ".next",
+            prevEl: ".prev"
+        },
+        autoplay: {
+            enabled: true,
+            delay: 5000
+        },
+    });
+  } else {
+    const swiper = new Swiper(".swiper", {
+        slidesPerView: 3,
+        loop: true,
+        grabCursor: true,
+        centeredSlides: true,
+        slideActiveClass: "active",
+        navigation: {
+            nextEl: ".next",
+            prevEl: ".prev"
+        },
+        autoplay: {
+            enabled: true,
+            delay: 5000
+        },
+    });
+  }
 
 const allImages = [ "./assets/img/project-img3.png" , "./assets/img/project-img2.png" , "./assets/img/project-img1.png" , "./assets/img/project-img3.png" , "./assets/img/project-img2.png" , "./assets/img/project-img1.png"];
 console.log(allImages);
