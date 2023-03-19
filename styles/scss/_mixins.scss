@@ -23,4 +23,9 @@
             @content;
         }
     }
+    @else if ($size == XL) {
+        @media (min-width:1024px) and (max-width:1245px) {
+            @content;
+        }
+    }
 }

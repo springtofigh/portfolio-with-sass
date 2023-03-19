@@ -527,7 +527,7 @@ body {
             }
 
             .fields-styles {
-                font-weight: 500;
+                font-weight: 700;
                 font-size: 1rem;
                 border: 1px solid #ffffff80;
                 padding: 1rem 1.3rem;
@@ -1021,4 +1021,33 @@ body {
     }
     }
 
+}
+
+@include media(XL) {
+    .contact {
+        .contact-container {
+            .contact-form {
+                width: 70%;
+                display: flex;
+                align-items: flex-start;
+                justify-content: center;
+                flex-direction: column;
+
+                .fields-styles {
+                    width: 100%;
+                    input {
+                        width: 50%;
+                    }
+                }
+    
+                textarea {
+                    width: 100%;
+                    resize: none;
+                }
+            }
+            .contact-img{
+                margin-right: 40px;
+        }
+    }
+    }
 }
