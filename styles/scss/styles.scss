@@ -52,45 +52,50 @@ body {
         align-items: center;
         // gap: 2rem;
 
-        .nav-button-container {
-            button {
-                font-size: 0.9rem;
-                font-weight: 700;
-                padding: 18px 34px;
-                color: $textColor;
-                border: 1px solid #fff;
-                position: relative;
-                background: transparent;
-                cursor: pointer;
-        
-                &::before {
-                    content: "";
-                    width: 0%;
-                    height: 100%;
-                    position: absolute;
-                    background-color: $textColor;
-                    left: 0;
-                    top: 0;
-                    z-index: -1;
-                    transition: 0.3s ease-in-out;
-                }
-        
-                &:hover {
-                    color: $bgColor;
-                }
+        div {
+            display: flex;
+            align-items: center;
+            .nav-button-container {
+                button {
+                    font-size: 0.9rem;
+                    font-weight: 700;
+                    padding: 18px 34px;
+                    color: $textColor;
+                    border: 1px solid #fff;
+                    position: relative;
+                    background: transparent;
+                    cursor: pointer;
             
-                &:hover::before {
-                    content: "";
-                    width: 100%;
-                    height: 100%;
-                    position: absolute; 
+                    &::before {
+                        content: "";
+                        width: 0%;
+                        height: 100%;
+                        position: absolute;
+                        background-color: $textColor;
+                        left: 0;
+                        top: 0;
+                        z-index: -1;
+                        transition: 0.3s ease-in-out;
+                    }
+            
+                    &:hover {
+                        color: $bgColor;
+                    }
+                
+                    &:hover::before {
+                        content: "";
+                        width: 100%;
+                        height: 100%;
+                        position: absolute; 
+                }
             }
-        }
-            margin-left: 0.9rem;
-        }
+                margin-left: 0.9rem;
+            }
 
-        i {
-            display: none;
+            .social-icons {
+                margin-left: 0;
+                gap: 0.3rem;
+            }
         }
 
         .items-container {
@@ -112,7 +117,10 @@ body {
             }
         }
         }
-        
+
+        i {
+            display: none;
+        }
     }
 }
 
@@ -703,20 +711,27 @@ body {
 // Media Queries
 @include media(S) {
     .nav-container {
-        
+        background-color: $bgColor;
         .nav-items {
-            .nav-button-container {
-            display: none;
-        }
-
+            align-items: flex-start;
+            
         i {
             display: flex;
         }
+
+        .items-container {
+            ul {
+                li {
+                padding-inline: 0;
+                }
+            }
+        }
+
         }
 
 
         .navbar {
-            
+            align-items: flex-start;
             .logo-img {
                 text-align: left;
                 img {
@@ -729,20 +744,20 @@ body {
     
                 .items-container  {
     
-                    display: none;
+                    // display: none;
 
-                    // margin: 1rem 0;
+                    margin: 1rem 0;
     
-                    // ul {
-                    //     display: block;
-                    // }
+                    ul {
+                        display: block;
+                    }
                     
                 }
             }
     
-            .social-icons {
-                display: none;
-            }
+            // .social-icons {
+            //     display: none;
+            // }
     
         }
 
@@ -877,22 +892,27 @@ body {
 }
 
 @include media(M) {
-
     .nav-container {
-        
+        background-color: $bgColor;
         .nav-items {
-            .nav-button-container {
-            display: none;
-        }
-
+            align-items: flex-start;
+            
         i {
             display: flex;
         }
+
+        .items-container {
+            ul {
+                li {
+                padding-inline: 0;
+                }
+            }
         }
+    }
 
 
         .navbar {
-            
+            align-items: flex-start;
             .logo-img {
                 img {
                     width: 70%;
@@ -901,17 +921,15 @@ body {
     
             .nav-items {
                 flex-direction: column-reverse;
-    
                 .items-container  {
-                    display: none;
+                    margin: 1rem 0;
+    
+                    ul {
+                        display: block;
+                    }
                     
                 }
             }
-    
-            .social-icons {
-                display: none;
-            }
-    
         }
 
 

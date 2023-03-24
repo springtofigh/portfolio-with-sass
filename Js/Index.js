@@ -67,3 +67,9 @@ tabTow.addEventListener("click" , () => {
 tabOne.addEventListener("click" , () => {
     textTab.style.display = "none";
 })
+
+// ===  Hamburger Menu  ===
+const menuIcon = document.querySelector(".menu");
+menuIcon.addEventListener("clock" , () => {
+    
+})
