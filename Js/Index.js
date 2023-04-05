@@ -69,7 +69,19 @@ tabOne.addEventListener("click" , () => {
 })
 
 // ===  Hamburger Menu  ===
-const menuIcon = document.querySelector(".menu");
-menuIcon.addEventListener("clock" , () => {
-    
-})
+function myFunction() {
+    const hideMenu = document.querySelector(".nav-items");
+    if (hideMenu.style.display === "block") {
+      hideMenu.style.display = "none";
+    } else {
+      hideMenu.style.display = "block";
+    }
+  }
+
+// 
+document.addEventListener("DOMContentLoaded", function () {
+    new TypeIt("#myElement", {
+      strings: [" سلام! من بهار هستم توسعه دهنده فرانت اند  "],
+      speed: 150,
+    }).go();
+  });

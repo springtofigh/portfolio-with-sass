@@ -171,7 +171,7 @@ body {
   background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
   border: 1px solid rgba(255, 255, 255, 0.5);
 }
-.home .home-content h1 {
+.home .home-content .myTypeIt {
   font-size: 70px;
   font-weight: 700;
   line-height: 1;
@@ -625,7 +625,7 @@ body {
   .home .home-content .tagline {
     font-weight: 300;
   }
-  .home .home-content h1 {
+  .home .home-content .myTypeIt {
     font-size: 35px;
     font-weight: 500;
   }
