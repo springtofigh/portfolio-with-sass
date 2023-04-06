@@ -70,11 +70,14 @@ tabOne.addEventListener("click" , () => {
 
 // ===  Hamburger Menu  ===
 function myFunction() {
-    const hideMenu = document.querySelector(".nav-items");
-    if (hideMenu.style.display === "block") {
-      hideMenu.style.display = "none";
+    const hideMenu = document.querySelector(".icon-button-container");
+    const hideMenuItems = document.querySelector(".items-container")
+    if (hideMenu.style.display === "none" && hideMenuItems.style.display === "none" ) {
+      hideMenu.style.display = "flex";
+      hideMenuItems .style.display = "flex";
     } else {
-      hideMenu.style.display = "block";
+      hideMenu.style.display = "none";
+      hideMenuItems .style.display = "none";
     }
   }
 

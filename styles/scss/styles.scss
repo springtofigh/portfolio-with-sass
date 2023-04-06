@@ -50,9 +50,8 @@ body {
     .nav-items {
         display: flex;
         align-items: center;
-        // gap: 2rem;
 
-        div {
+        .icon-button-container {
             display: flex;
             align-items: center;
             .nav-button-container {
@@ -117,10 +116,10 @@ body {
             }
         }
         }
+    }
 
-        i {
-            display: none;
-        }
+    i {
+        display: none;
     }
 }
 
@@ -714,10 +713,6 @@ body {
         background-color: $bgColor;
         .nav-items {
             align-items: flex-start;
-            
-        i {
-            display: flex;
-        }
 
         .items-container {
             ul {
@@ -729,39 +724,51 @@ body {
 
         }
 
+        .logo-icon-container {
+            display: flex;
+            justify-content: space-between;
+
+            i {
+                display: flex;
+            }
+
+        }
 
         .navbar {
-            align-items: flex-start;
+            align-items: normal;
+            flex-direction: column-reverse;
             .logo-img {
                 text-align: left;
                 img {
                     width: 50%;
                 }
             }
-    
+
+            .icon-button-container {
+                .nav-button-container{
+                    button {
+                        padding:20px;
+                    }
+                }
+            }
+
             .nav-items {
                 flex-direction: column-reverse;
-    
+                .social-icons {
+                    a {
+                        width: 35px;
+                        height: 35px;
+                    }
+                }
                 .items-container  {
-    
-                    // display: none;
-
                     margin: 1rem 0;
-    
                     ul {
                         display: block;
                     }
                     
                 }
             }
-    
-            // .social-icons {
-            //     display: none;
-            // }
-    
         }
-
-
     }
 
     .home {
@@ -897,9 +904,6 @@ body {
         .nav-items {
             align-items: flex-start;
             
-        i {
-            display: flex;
-        }
 
         .items-container {
             ul {
@@ -910,10 +914,21 @@ body {
         }
     }
 
+    .logo-icon-container {
+        display: flex;
+        justify-content: space-between;
+
+        i {
+            display: flex;
+        }
+    }
+
 
         .navbar {
-            align-items: flex-start;
+            align-items: normal;
+            flex-direction: column-reverse;
             .logo-img {
+                text-align: left;
                 img {
                     width: 70%;
                 }
@@ -923,7 +938,6 @@ body {
                 flex-direction: column-reverse;
                 .items-container  {
                     margin: 1rem 0;
-    
                     ul {
                         display: block;
                     }
