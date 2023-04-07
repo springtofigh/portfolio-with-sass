@@ -529,6 +529,8 @@ body {
 .footer .newsletter-section .newsletter-box .neswletter-text {
   font-size: 1.3rem;
   font-weight: 500;
+  flex-wrap: wrap;
+  margin-left: 10px;
 }
 .footer .newsletter-section .newsletter-box .newsletter-input {
   padding: 5px;
@@ -702,6 +704,12 @@ body {
   .footer .newsletter-section .newsletter-box .neswletter-text h3 {
     text-align: center;
   }
+  .footer .newsletter-section .newsletter-box .newsletter-input {
+    flex-direction: column;
+  }
+  .footer .newsletter-section .newsletter-box .newsletter-input input {
+    padding: 15px;
+  }
   .footer .footer-container {
     flex-direction: column-reverse;
   }
@@ -782,6 +790,12 @@ body {
   .footer .newsletter-section .newsletter-box {
     flex-direction: column;
     gap: 1rem;
+  }
+  .footer .newsletter-section .newsletter-box .newsletter-input {
+    flex-direction: column;
+  }
+  .footer .newsletter-section .newsletter-box .newsletter-input input {
+    padding: 15px;
   }
   .footer .newsletter-section .newsletter-box .neswletter-text h3 {
     text-align: center;
