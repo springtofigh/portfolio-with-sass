@@ -804,9 +804,8 @@ body {
     width: 100%;
     height: auto;
   }
-  .home .home-content h1 {
-    font-size: 50px;
-    font-weight: 500;
+  .home .home-content .myTypeIt {
+    font-size: 45px;
   }
   .contact .contact-container .contact-form {
     width: 70%;
