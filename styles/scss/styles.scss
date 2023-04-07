@@ -715,6 +715,7 @@ body {
             align-items: flex-start;
 
         .items-container {
+            display: none;
             ul {
                 li {
                 padding-inline: 0;
@@ -745,6 +746,7 @@ body {
             }
 
             .icon-button-container {
+                display: none;
                 .nav-button-container{
                     button {
                         padding:20px;
@@ -906,6 +908,7 @@ body {
             
 
         .items-container {
+            display: none;
             ul {
                 li {
                 padding-inline: 0;
@@ -944,6 +947,10 @@ body {
                     
                 }
             }
+
+            .icon-button-container {
+                display: none;
+            }
         }
 
 
@@ -957,9 +964,8 @@ body {
 
         .home-content {
             margin-right: 0;
-            h1 {
+            .myTypeIt {
                 font-size: 35px;
-                font-weight: 500;
             }
         }
 
