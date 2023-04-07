@@ -107,6 +107,10 @@ body {
   color: #fff;
   text-decoration: none;
   opacity: 0.5;
+  transition: all ease-in 0.2s;
+}
+.navbar .nav-items .items-container ul a:hover {
+  opacity: 1;
 }
 .navbar i {
   display: none;
@@ -784,6 +788,18 @@ body {
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
+  .navbar .nav-items .icon-button-container .nav-button-container button {
+    padding: 18px;
+  }
+  .navbar .nav-items .items-container ul {
+    margin-right: 10px;
+  }
+  .navbar .nav-items .items-container ul li {
+    padding-inline: 0.4rem;
+  }
+  .navbar .nav-items .items-container ul a {
+    padding: 1rem 0;
+  }
   .home .home-img img {
     width: 100%;
     height: auto;

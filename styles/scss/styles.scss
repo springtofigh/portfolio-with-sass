@@ -113,6 +113,12 @@ body {
                 color: $textColor;
                 text-decoration: none;
                 opacity: 0.5;
+                transition: all ease-in 0.2s;
+
+                &:hover {
+                    opacity: 1;
+                }
+
             }
         }
         }
@@ -1016,6 +1022,31 @@ body {
 }
 
 @include media(L) {
+    .navbar {
+        .nav-items {
+            .icon-button-container {
+                .nav-button-container {
+                    button {
+                        padding: 18px;
+                    }
+            }
+        }
+
+            .items-container {
+                ul {
+                    margin-right: 10px;
+                    li {
+                    padding-inline: 0.4rem;
+                    }
+
+                    a {
+                        padding: 1rem 0;
+                    }
+                }
+            }
+        }
+    }
+
     .home {
         .home-img {
             img {
