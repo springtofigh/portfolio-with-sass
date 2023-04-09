@@ -72,16 +72,27 @@ tabOne.addEventListener("click" , () => {
 })
 
 // ===  Hamburger Menu  ===
-function myFunction() {
-    const hideMenu = document.querySelector(".icon-button-container");
-    const hideMenuItems = document.querySelector(".items-container")
-    if (hideMenu.style.display === "none" && hideMenuItems.style.display === "none" ) {
+function myMenuFunction() {
+  const hideMenu = document.querySelector(".icon-button-container");
+  const hideMenuItems = document.querySelector(".items-container");
+
+    if (hideMenuItems.style.display === "none" ) {
       hideMenu.style.display = "flex";
       hideMenuItems .style.display = "flex";
     } else {
       hideMenu.style.display = "none";
       hideMenuItems .style.display = "none";
     }
+    // FIX ISSUES THAT NAVBAR ITEMS BECOME HIDE WHEN CHANGING BROWSER WIDTH 
+    addEventListener('resize', () => {
+      if (window.innerWidth > 768) {
+      hideMenu.style.display = "flex";
+      hideMenuItems .style.display = "flex";
+      } else {
+        hideMenu.style.display = "none";
+        hideMenuItems .style.display = "none";
+      }
+    });
   }
 
 // 
