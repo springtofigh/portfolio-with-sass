@@ -683,14 +683,11 @@ body {
 .skills .skills-box .next {
     display: none;
   }
-  .projects-container {
-    flex-direction: column;
-  }
-  .projects-container .projects-tabs .tabs {
+  .projects .projects-container .projects-tabs .tabs {
     font-size: 17px;
     font-weight: 500;
   }
-  .projects-container .projects-images {
+  .projects .projects-container .projects-images {
     grid-template-columns: repeat(1, 1fr);
   }
   .contact {
@@ -796,6 +793,9 @@ body {
   }
   .home .home-content .myTypeIt {
     font-size: 35px;
+  }
+  .projects .projects-container .projects-images {
+    grid-template-columns: repeat(2, 1fr);
   }
   .contact .contact-container {
     flex-direction: column-reverse;

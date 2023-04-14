@@ -846,9 +846,8 @@ body {
 
     }
 
+    .projects {
     .projects-container {
-        flex-direction: column;
-
         .projects-tabs {
             .tabs {
                 font-size: 17px;
@@ -860,6 +859,7 @@ body {
             grid-template-columns: repeat(1,1fr);
         }
 
+    }
     }
 
 
@@ -1019,6 +1019,14 @@ body {
         }
 
     }
+
+    .projects {
+        .projects-container {
+            .projects-images {
+                grid-template-columns: repeat(2,1fr);
+            }
+        }
+        }
 
     .contact {
         .contact-container {
