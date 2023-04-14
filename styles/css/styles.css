@@ -43,6 +43,10 @@ body {
   transition: all ease-in 0.3s;
 }
 
+.close-menu {
+  display: none;
+}
+
 .navbar {
   display: flex;
   align-items: center;
@@ -112,7 +116,10 @@ body {
 .navbar .nav-items .items-container ul a:hover {
   opacity: 1;
 }
-.navbar i {
+.navbar .logo-icon-container button {
+  display: none;
+}
+.navbar .logo-icon-container button i {
   display: none;
 }
 
@@ -144,10 +151,6 @@ body {
 }
 .social-icons a:hover img {
   filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
-}
-
-.close-menu {
-  display: none;
 }
 
 /************ HOME ************/
@@ -358,7 +361,7 @@ body {
 }
 .projects .projects-container .projects-images {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   justify-content: center;
   align-items: center;
   gap: 1rem;
@@ -611,8 +614,17 @@ body {
   .nav-container .logo-icon-container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
-  .nav-container .logo-icon-container i {
+  .nav-container .logo-icon-container button {
+    display: flex;
+    font-size: 1.25rem;
+    padding: 0.25rem;
+    border: 1px solid transparent;
+    background-color: transparent;
+    color: #fff;
+  }
+  .nav-container .logo-icon-container button i {
     display: flex;
   }
   .nav-container .navbar {
@@ -621,6 +633,7 @@ body {
   }
   .nav-container .navbar .logo-img {
     text-align: left;
+    padding: 0.25rem;
   }
   .nav-container .navbar .logo-img img {
     width: 50%;
@@ -678,7 +691,7 @@ body {
     font-weight: 500;
   }
   .projects-container .projects-images {
-    justify-content: space-around;
+    grid-template-columns: repeat(1, 1fr);
   }
   .contact {
     padding: 4rem 1rem 11rem 1rem;
@@ -741,7 +754,15 @@ body {
     display: flex;
     justify-content: space-between;
   }
-  .nav-container .logo-icon-container i {
+  .nav-container .logo-icon-container button {
+    display: flex;
+    font-size: 1.25rem;
+    padding: 0.25rem;
+    border: 1px solid transparent;
+    background-color: transparent;
+    color: #fff;
+  }
+  .nav-container .logo-icon-container button i {
     display: flex;
   }
   .nav-container .navbar {
@@ -750,6 +771,7 @@ body {
   }
   .nav-container .navbar .logo-img {
     text-align: left;
+    padding: 0.25rem;
   }
   .nav-container .navbar .logo-img img {
     width: 70%;

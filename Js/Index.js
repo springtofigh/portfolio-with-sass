@@ -47,6 +47,13 @@ const swiper = new Swiper(".swiper", {
 const allImages = [ "./assets/img/project-img3.png" , "./assets/img/project-img2.png" , "./assets/img/project-img1.png" , "./assets/img/project-img3.png" , "./assets/img/project-img2.png" , "./assets/img/project-img1.png"];
 console.log(allImages);
 
+const parent = document.querySelector(".projects-images");
+allImages.forEach(item => {
+    const img = document.createElement("img");
+    img.setAttribute("src" ,item)
+      parent.appendChild(img)
+})
+
 // ===  Project Section Active Style  ===
 const tabHover = document.querySelectorAll(".tab");
 const tabOne = document.querySelector(".tab-one");
@@ -63,9 +70,13 @@ function activeTab() {
     this.classList.add("tab-hover");
 }
 
+tabThree.addEventListener("click" , () => {
+  textTab.style.display = "none";
+})
+
 tabTow.addEventListener("click" , () => {
     textTab.style.display = "block";
-    proImages.style.display = "none";
+    proImages.map((item) => item.style.display = "none")
 })
 
 tabOne.addEventListener("click" , () => {

@@ -42,6 +42,10 @@ body {
     transition: all ease-in .3s;
 }
 
+.close-menu {
+    display: none;
+}
+
 .navbar {
     display: flex;
     align-items: center;
@@ -124,8 +128,14 @@ body {
         }
     }
 
-    i {
+    .logo-icon-container {
+        button {
+            display: none;
+
+                i {
         display: none;
+    }
+        }
     }
 }
 
@@ -163,9 +173,6 @@ body {
     }
 }
 
-.close-menu {
-    display: none;
-}
 
 /************ HOME ************/
 .home {
@@ -438,7 +445,7 @@ body {
 
         .projects-images {
                 display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                grid-template-columns: repeat(3, 1fr);
                 justify-content: center;
                 align-items: center;
                 gap: 1rem;
@@ -740,10 +747,20 @@ body {
         .logo-icon-container {
             display: flex;
             justify-content: space-between;
+            align-items: center;
 
-            i {
-                display: flex;
-            }
+            button {
+            display: flex;
+            font-size: 1.25rem;
+            padding: 0.25rem;
+            border: 1px solid transparent;
+            background-color: transparent;
+            color: $textColor;
+                i {
+                    display: flex;
+                }
+        }
+
 
         }
 
@@ -752,6 +769,7 @@ body {
             flex-direction: column-reverse;
             .logo-img {
                 text-align: left;
+                padding: 0.25rem;
                 img {
                     width: 50%;
                 }
@@ -839,9 +857,7 @@ body {
         }
 
         .projects-images {
-            // flex-direction: column;
-            justify-content: space-around;
-            // flex-wrap: wrap;
+            grid-template-columns: repeat(1,1fr);
         }
 
     }
@@ -943,9 +959,19 @@ body {
         display: flex;
         justify-content: space-between;
 
-        i {
-            display: flex;
-        }
+        button {
+        display: flex;
+        font-size: 1.25rem;
+        padding: 0.25rem;
+        border: 1px solid transparent;
+        background-color: transparent;
+        color: $textColor;
+            i {
+                display: flex;
+            }
+    }
+
+
     }
 
 
@@ -954,6 +980,7 @@ body {
             flex-direction: column-reverse;
             .logo-img {
                 text-align: left;
+                padding: 0.25rem;
                 img {
                     width: 70%;
                 }
