@@ -51,6 +51,7 @@ console.log(allImages);
 const tabHover = document.querySelectorAll(".tab");
 const tabOne = document.querySelector(".tab-one");
 const tabTow = document.querySelector(".tab-two");
+const tabThree = document.querySelector(".tab-three");
 const textTab =  document.querySelector(".tab-two-text");
 const proImages = document.querySelectorAll(".projects-images");
 console.log(proImages);
@@ -94,6 +95,23 @@ function myMenuFunction() {
       }
     });
   }
+
+  // CLOSE MENU WHEN NAVBAR LINKS ARE CLICKED
+  const navbarContainer = document.querySelector('.nav-items');
+  
+
+const linksCloseMenu = (e) => {
+  e.target.classList.contains('navbar-link') ? navbarContainer.style.display="none" : navbarContainer.style.display="flex";
+}
+window.addEventListener('click' , linksCloseMenu)
+
+  document.addEventListener('click', (event) => {
+  const targetElement = event.target;
+  if (!navbarContainer.contains(targetElement)) {
+    // Close the navbar
+    navbarContainer.classList.add('close-menu');
+  }
+});
 
 // 
 document.addEventListener("DOMContentLoaded", function () {
