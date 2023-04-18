@@ -60,8 +60,6 @@ const tabOne = document.querySelector(".tab-one");
 const tabTow = document.querySelector(".tab-two");
 const tabThree = document.querySelector(".tab-three");
 const textTab =  document.querySelector(".tab-two-text");
-const proImages = document.querySelectorAll(".projects-images");
-console.log(proImages);
 
 tabHover.forEach(item => item.addEventListener("click" , activeTab));
 
@@ -71,16 +69,18 @@ function activeTab() {
 }
 
 tabThree.addEventListener("click" , () => {
-  textTab.style.display = "none";
+    textTab.style.display = "block";
+    parent.style.display = "none";
 })
 
 tabTow.addEventListener("click" , () => {
-    textTab.style.display = "block";
-    proImages.map((item) => item.style.display = "none")
+  textTab.style.display = "none";
+  parent.style.display = "none";
 })
 
 tabOne.addEventListener("click" , () => {
     textTab.style.display = "none";
+    parent.style.display = "grid";
 })
 
 // ===  Hamburger Menu  ===
@@ -124,7 +124,7 @@ window.addEventListener('click' , linksCloseMenu)
   }
 });
 
-// 
+// TYPE EFFECT 
 document.addEventListener("DOMContentLoaded", function () {
     new TypeIt("#myElement", {
       strings: [" سلام! من بهار هستم توسعه دهنده فرانت اند  "],
