@@ -46,7 +46,6 @@ const swiper = new Swiper(".swiper", {
 
 // Project Images
 const allImages = [ "./assets/img/project-img3.png" , "./assets/img/project-img2.png" , "./assets/img/project-img1.png" , "./assets/img/project-img3.png" , "./assets/img/project-img2.png" , "./assets/img/project-img1.png"];
-console.log(allImages);
 
 const parent = document.querySelector(".projects-img");
 allImages.forEach(item => {
@@ -110,20 +109,10 @@ function myMenuFunction() {
 
   // CLOSE MENU WHEN NAVBAR LINKS ARE CLICKED
   const navbarContainer = document.querySelector('.nav-items');
-  
 
 const linksCloseMenu = (e) => {
   e.target.classList.contains('navbar-link') ? navbarContainer.style.display="none" : navbarContainer.style.display="flex";
 }
-window.addEventListener('click' , linksCloseMenu)
-
-  document.addEventListener('click', (event) => {
-  const targetElement = event.target;
-  if (!navbarContainer.contains(targetElement)) {
-    // Close the navbar
-    navbarContainer.classList.add('close-menu');
-  }
-});
 
 // TYPE EFFECT 
 document.addEventListener("DOMContentLoaded", function () {
