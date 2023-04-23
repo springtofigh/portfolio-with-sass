@@ -44,14 +44,15 @@ const swiper = new Swiper(".swiper", {
   }
 });
 
+// Project Images
 const allImages = [ "./assets/img/project-img3.png" , "./assets/img/project-img2.png" , "./assets/img/project-img1.png" , "./assets/img/project-img3.png" , "./assets/img/project-img2.png" , "./assets/img/project-img1.png"];
 console.log(allImages);
 
-const parent = document.querySelector(".projects-images");
+const parent = document.querySelector(".projects-img");
 allImages.forEach(item => {
     const img = document.createElement("img");
     img.setAttribute("src" ,item)
-      parent.appendChild(img)
+      parent.appendChild(img);
 })
 
 // ===  Project Section Active Style  ===
@@ -127,7 +128,7 @@ window.addEventListener('click' , linksCloseMenu)
 // TYPE EFFECT 
 document.addEventListener("DOMContentLoaded", function () {
     new TypeIt("#myElement", {
-      strings: [" سلام! من بهار هستم توسعه دهنده فرانت اند  "],
+      strings: ["سلام! من بهار هستم توسعه دهنده فرانت اند"],
       speed: 150,
     }).go();
   });
