@@ -113,6 +113,7 @@ function myMenuFunction() {
 const linksCloseMenu = (e) => {
   e.target.classList.contains('navbar-link') ? navbarContainer.style.display="none" : navbarContainer.style.display="flex";
 }
+window.addEventListener('click' , linksCloseMenu);
 
 // TYPE EFFECT 
 document.addEventListener("DOMContentLoaded", function () {
