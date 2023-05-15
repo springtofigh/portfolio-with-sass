@@ -816,16 +816,16 @@ body {
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
-  .navbar .nav-items .icon-button-container .nav-button-container button {
+  .navbar .icon-button-container .nav-button-container button {
     padding: 18px;
   }
-  .navbar .nav-items .items-container ul {
+  .navbar .nav-mobile .items-container ul {
     margin-right: 10px;
   }
-  .navbar .nav-items .items-container ul li {
+  .navbar .nav-mobile .items-container ul li {
     padding-inline: 0.4rem;
   }
-  .navbar .nav-items .items-container ul a {
+  .navbar .nav-mobile .items-container ul a {
     padding: 1rem 0;
   }
   .home .home-img img {

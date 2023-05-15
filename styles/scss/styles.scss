@@ -1069,15 +1069,14 @@ body {
 
 @include media(L) {
     .navbar {
-        .nav-items {
-            .icon-button-container {
-                .nav-button-container {
-                    button {
-                        padding: 18px;
-                    }
-            }
+        .icon-button-container {
+            .nav-button-container {
+                button {
+                    padding: 18px;
+                }
         }
-
+    }
+        .nav-mobile {
             .items-container {
                 ul {
                     margin-right: 10px;
