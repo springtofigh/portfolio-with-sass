@@ -84,36 +84,20 @@ tabOne.addEventListener("click" , () => {
 })
 
 // ===  Hamburger Menu  ===
-function myMenuFunction() {
-  const hideMenu = document.querySelector(".icon-button-container");
-  const hideMenuItems = document.querySelector(".items-container");
+  const menuToggleIcon = document.getElementById('menu-toggle-icon');
+const navMobile = document.querySelector('.nav-mobile');
+const toggleMenu = () => {
+  navMobile.classList.toggle("active");
+}
 
-    if (hideMenuItems.style.display === "none" ) {
-      hideMenu.style.display = "flex";
-      hideMenuItems .style.display = "flex";
-    } else {
-      hideMenu.style.display = "none";
-      hideMenuItems .style.display = "none";
-    }
-    // FIX ISSUES THAT NAVBAR ITEMS BECOME HIDE WHEN CHANGING BROWSER WIDTH 
-    addEventListener('resize', () => {
-      if (window.innerWidth > 768) {
-      hideMenu.style.display = "flex";
-      hideMenuItems .style.display = "flex";
-      } else {
-        hideMenu.style.display = "none";
-        hideMenuItems .style.display = "none";
-      }
-    });
-  }
+menuToggleIcon.addEventListener('click' , toggleMenu);
 
   // CLOSE MENU WHEN NAVBAR LINKS ARE CLICKED
-  const navbarContainer = document.querySelector('.nav-items');
+  const navLinks = document.querySelectorAll('.navbar-link');
 
-const linksCloseMenu = (e) => {
-  e.target.classList.contains('navbar-link') ? navbarContainer.style.display="none" : navbarContainer.style.display="flex";
-}
-window.addEventListener('click' , linksCloseMenu);
+  navLinks.forEach(link => link.addEventListener('click' , () => {
+    navMobile.classList.toggle("active");
+}));
 
 // TYPE EFFECT 
 document.addEventListener("DOMContentLoaded", function () {

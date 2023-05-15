@@ -613,11 +613,13 @@ body {
     display: flex;
   }
   .nav-container .navbar .nav-mobile {
+    display: none;
+  }
+  .nav-container .navbar .nav-mobile.active {
     display: block;
   }
   .nav-container .navbar .nav-mobile .items-container {
     margin: 1rem 0;
-    display: none;
   }
   .nav-container .navbar .nav-mobile .items-container ul {
     flex-direction: column;
@@ -744,11 +746,13 @@ body {
     display: flex;
   }
   .nav-container .navbar .nav-mobile {
+    display: none;
+  }
+  .nav-container .navbar .nav-mobile.active {
     display: block;
   }
   .nav-container .navbar .nav-mobile .items-container {
     margin: 1rem 0;
-    display: none;
   }
   .nav-container .navbar .nav-mobile .items-container ul {
     flex-direction: column;

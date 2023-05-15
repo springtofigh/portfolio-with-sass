@@ -54,11 +54,11 @@ body {
     .nav-mobile {
         display: flex;
         flex-direction: row-reverse;
-    align-items: center;
-    align-items: center;
-    justify-content: space-between;
         align-items: center;
-    justify-content: space-between;
+        align-items: center;
+        justify-content: space-between;
+        align-items: center;
+        justify-content: space-between;
 
         .items-container {
             ul {
@@ -754,10 +754,12 @@ body {
             }
 
             .nav-mobile {
-                display: block;
+                display: none;
+                &.active {
+                    display: block;
+                }
                 .items-container {
                     margin: 1rem 0;
-                    display: none;
                     ul {
                         flex-direction: column;
                         li {
@@ -959,10 +961,12 @@ body {
             }
 
             .nav-mobile {
-                display: block;
+                display: none;
+                &.active {
+                    display: block;
+                }
                 .items-container {
                     margin: 1rem 0;
-                    display: none;
                     ul {
                         flex-direction: column;
                         li {
