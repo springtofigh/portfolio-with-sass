@@ -1,10 +1,39 @@
-
 @font-face {
     font-family: Shabnam;
     src: url('../../assets/font/Shabnam.eot');
     src: url('../../assets/font/Shabnam.eot?#iefix') format('embedded-opentype'),
-       url('../../assets/font/Shabnam.woff2') format('woff2'),
-       url('../../assets/font/Shabnam.woff') format('woff'),
-       url('../../assets/font/Shabnam.ttf') format('truetype');
-font-weight: normal;
+        url('../../assets/font/Shabnam.woff2') format('woff2'),
+        url('../../assets/font/Shabnam.woff') format('woff'),
+        url('../../assets/font/Shabnam.ttf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Shabnam;
+    src: url('../../assets/font/Shabnam-Light-FD.eot');
+    src: url('../../assets/font/Shabnam-Light-FD.eot?#iefix') format('embedded-opentype'),
+        url('../../assets/font//Shabnam-Light-FD.woff2') format('woff2'),
+        url('../../assets/font/Shabnam-Light-FD.woff') format('woff'),
+        url('../../assets/font/Shabnam-Light-FD.ttf') format('truetype');
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: Shabnam;
+    src: url('../../assets/font/Shabnam-FD.eot');
+    src: url('../../assets/font/Shabnam-FD.eot?#iefix') format('embedded-opentype'),
+        url('../../assets/font/Shabnam-FD.woff2') format('woff2'),
+        url('../../assets/font/Shabnam-FD.woff') format('woff'),
+        url('../../assets/font/Shabnam-FD.ttf') format('truetype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: Shabnam;
+    src: url('../../assets/font/Shabnam-Bold-FD.eot');
+    src: url('../../assets/font/Shabnam-Bold-FD.eot?#iefix') format('embedded-opentype'),
+        url('../../assets/font/Shabnam-Bold-FD.woff2') format('woff2'),
+        url('../../assets/font/Shabnam-Bold-FD.woff') format('woff'),
+        url('../../assets/font/Shabnam-Bold-FD.ttf') format('truetype');
+    font-weight: 600;
 }
