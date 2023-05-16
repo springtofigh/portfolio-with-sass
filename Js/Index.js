@@ -84,6 +84,8 @@ const tabTow = document.querySelector(".tab-two");
 const tabThree = document.querySelector(".tab-three");
 const textTab =  document.querySelector(".tab-two-text");
 
+const projectImageContainer = document.querySelector(".projects-images");
+
 tabHover.forEach(item => item.addEventListener("click" , activeTab));
 
 function activeTab() {
@@ -93,17 +95,17 @@ function activeTab() {
 
 tabThree.addEventListener("click" , () => {
     textTab.style.display = "block";
-    parent.style.display = "none";
+    projectImageContainer.style.display = "none";
 })
 
 tabTow.addEventListener("click" , () => {
   textTab.style.display = "none";
-  parent.style.display = "none";
+  projectImageContainer.style.display = "none";
 })
 
 tabOne.addEventListener("click" , () => {
     textTab.style.display = "none";
-    parent.style.display = "grid";
+    projectImageContainer.style.display = "grid";
 })
 
 // ===  Hamburger Menu  ===
