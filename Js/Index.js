@@ -45,14 +45,37 @@ const swiper = new Swiper(".swiper", {
 });
 
 // Project Images
-const allImages = [ "./assets/img/project-img3.png" , "./assets/img/project-img2.png" , "./assets/img/project-img1.png" , "./assets/img/project-img3.png" , "./assets/img/project-img2.png" , "./assets/img/project-img1.png"];
+const allImages = [ "project-img3.png" , "project-img2.png" , "project-img1.png" , "project-img3.png" , "project-img2.png" , "project-img1.png"];
+const randomIndex = Math.floor(Math.random() * allImages.length);
+const projectsImages = document.querySelector('.projects-images');
 
-const parent = document.querySelector(".projects-img");
-allImages.forEach(item => {
-    const img = document.createElement("img");
-    img.setAttribute("src" ,item)
-      parent.appendChild(img);
-})
+for (let i = 0; i < 6; i++) {
+  // create the nested div elements and add classes
+  const projectsImg = document.createElement("div");
+  projectsImg.className = "projects-img";
+  const overlay = document.createElement("div");
+  overlay.className = "overlay";
+
+  // create the img tag
+  const img = document.createElement("img");
+  img.setAttribute("src", "./assets/img/" + allImages[randomIndex]);
+  projectsImg.appendChild(img);
+
+  // create the h4 and span elements and add text content
+  const heading = document.createElement("h4");
+  heading.textContent = "Business Startup";
+  const span = document.createElement("span");
+  span.textContent = "Design and Development";
+
+  // append the h4 and span elements to the overlay div
+  overlay.appendChild(heading);
+  overlay.appendChild(span);
+
+  // append the nested div elements to the main projects-images div
+  projectsImages.appendChild(projectsImg);
+  projectsImg.appendChild(overlay);
+}
+
 
 // ===  Project Section Active Style  ===
 const tabHover = document.querySelectorAll(".tab");
