@@ -45,7 +45,7 @@ const swiper = new Swiper(".swiper", {
 });
 
 // Project Images
-const allImages = [ "project-img3.png" , "project-img2.png" , "project-img1.png" , "project-img3.png" , "project-img2.png" , "project-img1.png"];
+const allImages = ["project-img6.png", "project-img5.png" , "project-img4.png" , "project-img3.png" , "project-img2.png" , "project-img1.png"];
 const randomIndex = Math.floor(Math.random() * allImages.length);
 const projectsImages = document.querySelector('.projects-images');
 
@@ -58,7 +58,8 @@ for (let i = 0; i < 6; i++) {
 
   // create the img tag
   const img = document.createElement("img");
-  img.setAttribute("src", "./assets/img/" + allImages[randomIndex]);
+  img.setAttribute("src", `../assets/img/${allImages[randomIndex]}`);
+  allImages.splice(randomIndex, 1);
   projectsImg.appendChild(img);
 
   // create the h4 and span elements and add text content
