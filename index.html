@@ -181,15 +181,15 @@
                 </div>
                 <form action="POST">
                     <div>
-                        <input class="fields-styles" type="text" placeholder="نام">
-                        <input class="fields-styles" type="text" placeholder="نام خانوادگی">
+                        <input class="fields-styles" type="text" placeholder="نام" required>
+                        <input class="fields-styles" type="text" placeholder="نام خانوادگی" required>
                     </div>
                     <div>
-                        <input class="fields-styles" type="email" placeholder="ایمیل">
-                        <input class="fields-styles" type="tel" placeholder="شماره تماس">
+                        <input class="fields-styles" type="email" placeholder="ایمیل" required>
+                        <input class="fields-styles" type="tel" placeholder="شماره تماس" required>
                     </div>
                     <div>
-                        <textarea class="fields-styles" placeholder="پیام" rows="6"></textarea>
+                        <textarea class="fields-styles" placeholder="پیام" rows="6" required></textarea>
                     </div>
                     <button type="submit">ارسال</button>
                 </form>
@@ -250,5 +250,3 @@
 <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
 <script src="./Js/Index.js"></script>
 </html>
-
-<!-- sass --watch styles\scss\styles.scss:styles\css\styles.css -->
