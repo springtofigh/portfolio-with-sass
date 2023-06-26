@@ -59,7 +59,7 @@ for (let i = 0; i < 6; i++) {
   // create the img tag
   const img = document.createElement("img");
   img.setAttribute("src", `../assets/img/${allImages[randomIndex]}`);
-  allImages.splice(randomIndex, 1);
+  allImages.splice(randomIndex, 0);
   projectsImg.appendChild(img);
 
   // create the h4 and span elements and add text content
