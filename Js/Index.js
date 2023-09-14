@@ -45,37 +45,32 @@ const swiper = new Swiper(".swiper", {
 });
 
 // Project Images
-const allImages = ["project-img6.png", "project-img5.png" , "project-img4.png" , "project-img3.png" , "project-img2.png" , "project-img1.png"];
-const randomIndex = Math.floor(Math.random() * allImages.length);
+const allImages = ["project-img1.png" , "project-img2.png" , "project-img3.png" , "project-img3.png" , "project-img2.png" , "project-img1.png"];
 const projectsImages = document.querySelector('.projects-images');
 
-for (let i = 0; i < 6; i++) {
-  // create the nested div elements and add classes
+allImages.forEach(image => {
   const projectsImg = document.createElement("div");
   projectsImg.className = "projects-img";
+
   const overlay = document.createElement("div");
   overlay.className = "overlay";
 
-  // create the img tag
   const img = document.createElement("img");
-  img.setAttribute("src", `../assets/img/${allImages[randomIndex]}`);
-  allImages.splice(randomIndex, 0);
+  img.setAttribute("src", `../assets/img/${image}`);
   projectsImg.appendChild(img);
 
-  // create the h4 and span elements and add text content
   const heading = document.createElement("h4");
   heading.textContent = "Business Startup";
+
   const span = document.createElement("span");
   span.textContent = "Design and Development";
 
-  // append the h4 and span elements to the overlay div
   overlay.appendChild(heading);
   overlay.appendChild(span);
 
-  // append the nested div elements to the main projects-images div
   projectsImages.appendChild(projectsImg);
   projectsImg.appendChild(overlay);
-}
+});
 
 
 // ===  Project Section Active Style  ===
