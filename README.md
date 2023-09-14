@@ -1,7 +1,7 @@
 
 # Personal Portfolio
 
-This personal portfolio features a clean and modern design 
+This personal portfolio features a clean and modern design. The project is written in Persian and features a clean, modern design inspired by `@judygab`.
 
 ![My Portfoli-gif](https://github.com/springtofigh/portfolio-with-sass/assets/90114320/0505b898-34e3-4cd9-9bf2-1d80e652cd60)
 
