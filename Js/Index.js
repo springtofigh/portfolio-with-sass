@@ -127,3 +127,9 @@ document.addEventListener("DOMContentLoaded", function () {
       speed: 150,
     }).go();
   });
+
+// Events
+window.onload = function() {
+  let imgHero = document.getElementById('heroImage');
+  imgHero.classList.add('up-down');
+};
