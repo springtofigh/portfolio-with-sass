@@ -60,9 +60,11 @@ allImages.forEach(image => {
   projectsImg.appendChild(img);
 
   const heading = document.createElement("h4");
+  heading.className = 'heading-text';
   heading.textContent = "Business Startup";
 
   const span = document.createElement("span");
+  span.className = 'span-text';
   span.textContent = "Design and Development";
 
   overlay.appendChild(heading);
