@@ -381,6 +381,17 @@ body {
   margin: 1rem auto 1.8rem auto;
   text-align: center;
   width: 56%;
+  animation: slideFromBottom 0.5s forwards;
+}
+@keyframes slideFromBottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 .projects .projects-container .tabs {
   width: 72%;
