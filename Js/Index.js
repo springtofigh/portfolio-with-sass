@@ -45,7 +45,7 @@ const swiper = new Swiper(".swiper", {
 });
 
 // Project Images
-const allImages = ["project-img1.png" , "project-img2.png" , "project-img3.png" , "project-img3.png" , "project-img2.png" , "project-img1.png"];
+const allImages = ["project-img3.png" , "project-img2.png" , "project-img1.png" , "project-img3.png" , "project-img2.png" , "project-img1.png"];
 const projectsImages = document.querySelector('.projects-images');
 
 allImages.forEach(image => {
