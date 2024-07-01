@@ -727,6 +727,7 @@ body {
     border: 1px solid transparent;
     background-color: transparent;
     color: #fff;
+    cursor: pointer;
   }
   .home .home-container {
     flex-direction: column-reverse;
@@ -856,6 +857,7 @@ body {
     border: 1px solid transparent;
     background-color: transparent;
     color: #fff;
+    cursor: pointer;
   }
   .home .home-container {
     flex-direction: column-reverse;
