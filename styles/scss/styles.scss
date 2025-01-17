@@ -459,6 +459,33 @@ body {
             overflow: hidden;
             margin-bottom: 2.5rem;
 
+        /* From Uiverse.io by sheptalo */ 
+        .tab {
+            background: inherit;
+            // transition: all 0.3ms;
+        
+            &::before {
+            content: "";
+            z-index: -1;
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            height: 100%;
+            width: 0;
+            background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);;
+            transition-timing-function: ease-in;
+            transition: all 0.5s;
+            }
+        
+            &:active {
+                &::before {
+                    left: 0%;
+                    width: 100%;
+                }
+            }
+        }
+
             .tab-hover {
                 &::before {
                     content: "";
@@ -469,7 +496,7 @@ body {
                     top: 0;
                     left: 0;
                     z-index: -1;
-                    transition: 0.3s ease-in-out;
+                    transition: 1.3s ease-in-out;
                 }
             }
 
@@ -680,6 +707,21 @@ body {
             }
             
         }
+
+        .animate {
+            animation: myAnimation 2s ease-in-out;
+          }
+          
+          @keyframes myAnimation {
+            from {
+              opacity: 0;
+              transform: translateY(50px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
     }
 }
 
