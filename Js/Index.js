@@ -135,3 +135,19 @@ window.onload = function() {
   let imgHero = document.getElementById('heroImage');
   imgHero.classList.add('up-down');
 };
+
+// User scroll position and play animation
+const animatedSection = document.getElementById('animated-section');
+
+function handleScroll() {
+  const sectionPosition = animatedSection.offsetTop;
+  const scrollPosition = window.scrollY;
+
+  if (scrollPosition <= sectionPosition) {
+    animatedSection.classList.add('animate');
+  } else {
+    animatedSection.classList.remove('animate');
+  }
+}
+
+window.addEventListener('scroll', handleScroll);

@@ -404,6 +404,27 @@ body {
   border-radius: 50px;
   overflow: hidden;
   margin-bottom: 2.5rem;
+  /* From Uiverse.io by sheptalo */
+}
+.projects .projects-container .tabs .tab {
+  background: inherit;
+}
+.projects .projects-container .tabs .tab::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  transition-timing-function: ease-in;
+  transition: all 0.5s;
+}
+.projects .projects-container .tabs .tab:active::before {
+  left: 0%;
+  width: 100%;
 }
 .projects .projects-container .tabs .tab-hover::before {
   content: "";
@@ -414,7 +435,7 @@ body {
   top: 0;
   left: 0;
   z-index: -1;
-  transition: 0.3s ease-in-out;
+  transition: 1.3s ease-in-out;
 }
 .projects .projects-container .tabs div {
   background-color: transparent;
@@ -588,6 +609,19 @@ body {
 }
 .contact .contact-container .contact-img img {
   width: 92%;
+}
+.contact .contact-container .animate {
+  animation: myAnimation 2s ease-in-out;
+}
+@keyframes myAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /************ FOOTER ************/
