@@ -770,7 +770,7 @@ body {
             border-radius: 55px;
             color: $bgColor;
             padding: 150px 125px;
-            
+            @include container;
 
             .neswletter-text {
                 font-size: 1.3rem;

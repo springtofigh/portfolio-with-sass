@@ -678,6 +678,8 @@ body {
   border-radius: 55px;
   color: #121212;
   padding: 150px 125px;
+  max-width: 1320px;
+  margin: auto;
 }
 .footer .newsletter-section .newsletter-box .neswletter-text {
   font-size: 1.3rem;
