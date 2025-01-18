@@ -343,6 +343,13 @@ body {
                 font-weight: 700;
             }
 
+            h5 {
+                font-size: 1.25rem;
+                font-weight: 500;
+                line-height: 1.2rem;
+                margin-bottom: 0.5rem;
+            }
+
             p {
                 color: $colorgray;
                 font-size: 1rem;
@@ -351,33 +358,35 @@ body {
             }
 
             
-            .prev,
-            .next {
+            button {
                 position: absolute;
-                top:70%;
+                top:60%;
                 background: rgba(5, 5, 5, 0.6);
-                width: 50px;
-                height: 50px;
+                min-width: 50px;
+                min-height: 50px;
                 border-radius: 50%;
-                line-height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: none;
+                outline: 0;
                 cursor: pointer;
                 z-index: 30;
         }
 
         .prev {
-            left: 12%;
+            left: 20%;
         }
         .next {
-            right: 12%;
+            right: 20%;
         }
 
     }
 
     .skills-percent {
+        width: 80%;
         display: flex;
-        justify-content: space-around;
         align-items: center;
-
 }
 
 .swiper {
@@ -389,8 +398,8 @@ body {
 
         .swiper-slide {
             img {
-            width: 80%;
-            height: 80%;
+            margin-bottom: 15px;
+            width: 50%;
         }
     }
 
@@ -939,19 +948,35 @@ body {
 
     .skills {
         .skills-box {
-            padding: 60px 40px;
+            padding: 60px 50px;
 
             h2 {
                 font-size: 1.5rem;
             }
 
-            .prev,
-            .next {
-                display: none;
+            h5 {
+                font-weight: 500;
+                line-height: 1.2rem;
+                margin-bottom: 0.5rem;
             }
 
         }
 
+        .swiper {
+            height: 250px;
+        
+                .swiper-wrapper {
+                    align-items: center;
+                }
+                .swiper-slide {
+                    height: auto;
+                    img {
+                    margin-bottom: 15px;
+                    width: 80%;
+                }
+            }
+        
+        }
     }
 
     .projects {

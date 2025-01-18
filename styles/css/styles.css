@@ -214,6 +214,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  max-width: 1320px;
+  margin: auto;
 }
 .home .home-content {
   text-align: right;
@@ -267,7 +269,7 @@ body {
   animation: zoomInAnimation 0.5s forwards;
 }
 .home .home-img img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
   transition: transform 0.5s;
 }
@@ -307,10 +309,18 @@ body {
   padding: 60px 50px;
   text-align: center;
   border-radius: 2.3rem;
+  max-width: 1320px;
+  margin: auto;
 }
 .skills .skills-box h2 {
   font-size: 2.5rem;
   font-weight: 700;
+}
+.skills .skills-box h5 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.2rem;
+  margin-bottom: 0.5rem;
 }
 .skills .skills-box p {
   color: #B8B8B8;
@@ -318,27 +328,30 @@ body {
   line-height: 1.5em;
   margin: 1rem 0 5rem 0;
 }
-.skills .skills-box .prev,
-.skills .skills-box .next {
+.skills .skills-box button {
   position: absolute;
-  top: 70%;
+  top: 60%;
   background: rgba(5, 5, 5, 0.6);
-  width: 50px;
-  height: 50px;
+  min-width: 50px;
+  min-height: 50px;
   border-radius: 50%;
-  line-height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: 0;
   cursor: pointer;
   z-index: 30;
 }
 .skills .skills-box .prev {
-  left: 12%;
+  left: 20%;
 }
 .skills .skills-box .next {
-  right: 12%;
+  right: 20%;
 }
 .skills .skills-percent {
+  width: 80%;
   display: flex;
-  justify-content: space-around;
   align-items: center;
 }
 .skills .swiper {
@@ -348,8 +361,8 @@ body {
   align-items: center;
 }
 .skills .swiper .swiper-slide img {
-  width: 80%;
-  height: 80%;
+  margin-bottom: 15px;
+  width: 50%;
 }
 .skills .skills-bg-image {
   position: absolute;
@@ -368,6 +381,10 @@ body {
   align-items: center;
   justify-content: center;
   background-color: #000;
+}
+.projects .projects-container {
+  max-width: 1320px;
+  margin: auto;
 }
 .projects .projects-container .project-content h2 {
   font-size: 2.5rem;
@@ -525,6 +542,9 @@ body {
 /************ CONTACT ************/
 .contact {
   padding: 4rem 2.7rem 11rem 2.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
 }
 .contact h2 {
@@ -534,17 +554,16 @@ body {
   text-align: right;
 }
 .contact .contact-container {
-  width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1320px;
+  margin: 0 auto;
 }
 .contact .contact-container .contact-form {
-  width: 70%;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  flex-direction: column;
+  flex: 1 1 48%;
+  margin: 10px;
+  padding: 20px;
 }
 .contact .contact-container .contact-form textarea {
   width: 100%;
@@ -552,10 +571,11 @@ body {
   resize: none;
 }
 .contact .contact-container .contact-form .fields-styles {
+  width: 100%;
   font-weight: 700;
   font-size: 1rem;
   border: 1px solid rgba(255, 255, 255, 0.5019607843);
-  padding: 1rem 1.3rem;
+  padding: 1.3rem 1.5rem;
   margin-bottom: 8px;
   background: rgba(255, 255, 255, 0.1019607843);
   color: #fff;
@@ -589,6 +609,7 @@ body {
   border: none;
   transition: 0.3s ease-in-out;
   z-index: 20;
+  cursor: pointer;
 }
 .contact .contact-container .contact-form button:hover {
   color: #fff;
@@ -607,8 +628,20 @@ body {
 .contact .contact-container .contact-form button:hover::before {
   width: 100%;
 }
+.contact .contact-container .contact-form .input-container {
+  display: flex;
+  gap: 10px;
+}
+.contact .contact-container .contact-img {
+  flex: 1 1 48%;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .contact .contact-container .contact-img img {
-  width: 92%;
+  max-width: 100%;
+  height: auto;
 }
 .contact .contact-container .animate {
   animation: myAnimation 2s ease-in-out;
@@ -785,14 +818,28 @@ body {
     text-align: justify;
   }
   .skills .skills-box {
-    padding: 60px 40px;
+    padding: 60px 50px;
   }
   .skills .skills-box h2 {
     font-size: 1.5rem;
   }
-  .skills .skills-box .prev,
-  .skills .skills-box .next {
-    display: none;
+  .skills .skills-box h5 {
+    font-weight: 500;
+    line-height: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  .skills .swiper {
+    height: 250px;
+  }
+  .skills .swiper .swiper-wrapper {
+    align-items: center;
+  }
+  .skills .swiper .swiper-slide {
+    height: auto;
+  }
+  .skills .swiper .swiper-slide img {
+    margin-bottom: 15px;
+    width: 80%;
   }
   .projects .projects-container .projects-tabs .tabs {
     font-size: 17px;
@@ -808,16 +855,14 @@ body {
     flex-direction: column-reverse;
   }
   .contact .contact-container .contact-form {
-    width: 100%;
+    margin: 0;
   }
-  .contact .contact-container .contact-form .fields-styles {
-    width: 100%;
+  .contact .contact-container .contact-form .input-container {
+    display: block;
   }
-  .contact .contact-container .contact-form textarea {
-    width: 100%;
-  }
-  .contact .contact-container .contact-img img {
-    width: 100%;
+  .contact .contact-container .contact-form,
+  .contact .contact-container .contact-img {
+    flex: 1 1 100%;
   }
   .footer .newsletter-section {
     padding: 0 2rem;
@@ -914,14 +959,11 @@ body {
     flex-direction: column-reverse;
   }
   .contact .contact-container .contact-form {
-    width: 100%;
-    justify-content: center;
+    margin: 0;
+    flex-direction: column-reverse;
   }
-  .contact .contact-container .contact-form .fields-styles {
-    width: 100%;
-  }
-  .contact .contact-container .contact-img img {
-    width: 100%;
+  .contact .contact-container .contact-form .input-container {
+    display: block;
   }
   .footer .newsletter-section {
     padding: 0 2rem;
@@ -960,10 +1002,12 @@ body {
   .home .home-content .myTypeIt {
     font-size: 45px;
   }
+  .contact .contact-container {
+    flex-direction: column-reverse;
+  }
   .contact .contact-container .contact-form {
-    width: 70%;
+    width: 100%;
     display: flex;
-    align-items: flex-start;
     justify-content: center;
     flex-direction: column;
   }
@@ -972,20 +1016,15 @@ body {
   }
   .contact .contact-container .contact-form .fields-styles input {
     width: 50%;
-  }
-  .contact .contact-container .contact-form textarea {
-    width: 100%;
-    resize: none;
-  }
-  .contact .contact-container .contact-img {
-    margin-right: 40px;
   }
 }
 @media (min-width: 1024px) and (max-width: 1245px) {
+  .contact .contact-container {
+    flex-direction: column-reverse;
+  }
   .contact .contact-container .contact-form {
-    width: 70%;
+    width: 100%;
     display: flex;
-    align-items: flex-start;
     justify-content: center;
     flex-direction: column;
   }
@@ -994,13 +1033,6 @@ body {
   }
   .contact .contact-container .contact-form .fields-styles input {
     width: 50%;
-  }
-  .contact .contact-container .contact-form textarea {
-    width: 100%;
-    resize: none;
-  }
-  .contact .contact-container .contact-img {
-    margin-right: 40px;
   }
 }
 
