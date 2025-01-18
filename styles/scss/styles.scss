@@ -229,6 +229,7 @@ body {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @include container;
     }
 
     .home-content {
@@ -259,7 +260,6 @@ body {
             color: $colorgray;
             font-size: 18px;
             line-height: 1.5em;
-            // width: 96%;
             text-align: right;
             margin-bottom: 2.5rem;
         }
@@ -336,7 +336,7 @@ body {
             padding: 60px 50px;
             text-align: center;
             border-radius: 2.3rem;
-            
+            @include container;
 
             h2 {
                 font-size: 2.5rem;
@@ -417,7 +417,7 @@ body {
     background-color: $colorDark;
 
     .projects-container {
-
+        @include container;
         .project-content {
             h2 {
                 font-size: 2.5rem;
@@ -606,6 +606,9 @@ body {
 /************ CONTACT ************/
 .contact {
     padding:4rem 2.7rem 11rem 2.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
 
     h2 {
@@ -616,17 +619,16 @@ body {
     }
 
     .contact-container {
-        width: 100%;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1320px;
+        margin: 0 auto; 
 
         .contact-form {
-            width: 70%;
-            display: flex;
-            align-items: flex-start;
-            justify-content: center;
-            flex-direction: column;
+            flex: 1 1 48%;
+            margin: 10px; 
+            padding: 20px; 
 
             textarea {
                 width: 100%;
@@ -635,10 +637,11 @@ body {
             }
 
             .fields-styles {
+                width: 100%;
                 font-weight: 700;
                 font-size: 1rem;
                 border: 1px solid #ffffff80;
-                padding: 1rem 1.3rem;
+                padding: 1.3rem 1.5rem;
                 margin-bottom: 8px;
                 background: #ffffff1a;
                 color: $textColor;
@@ -676,6 +679,7 @@ body {
                     border: none;
                     transition: 0.3s ease-in-out;
                     z-index: 20;
+                    cursor: pointer;
 
                     &:hover {
                         color: $textColor;
@@ -699,11 +703,22 @@ body {
                     }
                 
             }
+
+            .input-container {
+                display: flex; 
+                gap: 10px;
+            }
         }
 
-        .contact-img{
+        .contact-img {
+            flex: 1 1 48%; 
+            margin: 10px; 
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+
             img {
-                width: 92%;
+                @include image
             }
             
         }
@@ -962,22 +977,15 @@ body {
             flex-direction: column-reverse;
 
             .contact-form {
-                width: 100%;
-
-                .fields-styles {
-                    width: 100%;
+                margin: 0;
+                .input-container {
+                    display: block;
                 }
-
-                textarea {
-                    width: 100%;
-                }
-
             }
 
-            .contact-img{
-                img {
-                    width: 100%;
-                }
+            .contact-form,
+            .contact-img {
+                flex: 1 1 100%; // full width
             }
 
         }
@@ -1117,25 +1125,19 @@ body {
         }
         }
 
-    .contact {
-        .contact-container {
-            .contact-form {
-                width: 100%;
-                justify-content: center;
-
-                .fields-styles {
-                    width: 100%;
+        .contact {
+            .contact-container {
+                flex-direction: column-reverse;
+                .contact-form {
+                    margin: 0;
+                    flex-direction: column-reverse;
+                    .input-container {
+                        display: block;
+                    }
                 }
-
             }
-            flex-direction: column-reverse;
-            .contact-img{
-                img {
-                    width: 100%;
-                }
+            
         }
-    }
-    }
 
     .footer {
 
@@ -1208,10 +1210,10 @@ body {
 
     .contact {
         .contact-container {
+            flex-direction: column-reverse;
             .contact-form {
-                width: 70%;
+                width: 100%;
                 display: flex;
-                align-items: flex-start;
                 justify-content: center;
                 flex-direction: column;
 
@@ -1221,15 +1223,8 @@ body {
                         width: 50%;
                     }
                 }
-    
-                textarea {
-                    width: 100%;
-                    resize: none;
-                }
+
             }
-            .contact-img{
-                margin-right: 40px;
-        }
     }
     }
 
@@ -1238,10 +1233,10 @@ body {
 @include media(XL) {
     .contact {
         .contact-container {
+            flex-direction: column-reverse;
             .contact-form {
-                width: 70%;
+                width: 100%;
                 display: flex;
-                align-items: flex-start;
                 justify-content: center;
                 flex-direction: column;
 
@@ -1251,15 +1246,8 @@ body {
                         width: 50%;
                     }
                 }
-    
-                textarea {
-                    width: 100%;
-                    resize: none;
-                }
+
             }
-            .contact-img{
-                margin-right: 40px;
-        }
     }
     }
 }
