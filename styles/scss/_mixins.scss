@@ -5,8 +5,13 @@
 }
 
 @mixin image {
-    width: 100%;
+    max-width: 100%;
     height: auto;
+}
+
+@mixin container {
+    max-width: 1320px;
+    margin: auto;
 }
 
 @mixin media($size) {
