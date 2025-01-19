@@ -137,17 +137,41 @@ window.onload = function() {
 };
 
 // User scroll position and play animation
-const animatedSection = document.getElementById('animated-section');
+const contactImgAnimated = document.getElementById('animated-section');
+const homeSectionAnimated = document.getElementById('home-img-animated');
+const animatedText = document.getElementById('project-txt-animated');
 
 function handleScroll() {
-  const sectionPosition = animatedSection.offsetTop;
-  const scrollPosition = window.scrollY;
 
-  if (scrollPosition <= sectionPosition) {
-    animatedSection.classList.add('animate');
+  const rect = contactImgAnimated.getBoundingClientRect();
+  if (rect.top < window.innerHeight && rect.bottom >= 0) {
+    contactImgAnimated.classList.add('animate');
   } else {
-    animatedSection.classList.remove('animate');
+    contactImgAnimated.classList.remove('animate');
   }
 }
 
+function homeImageAnimated() {
+  const rect = homeSectionAnimated.getBoundingClientRect();
+  if (rect.top < window.innerHeight && rect.bottom >= 0) {
+    homeSectionAnimated.classList.add('scale-up-center');
+  } else {
+    homeSectionAnimated.classList.remove('scale-up-center');
+  }
+}
+
+
+function textTabAnimated() {
+
+  const rect = animatedText.getBoundingClientRect();
+  if (rect.top < window.innerHeight && rect.bottom >= 0) {
+    animatedText.classList.add('text-animate')
+  } else {
+    animatedText.classList.remove('text-animate')
+  }
+}
+
+
 window.addEventListener('scroll', handleScroll);
+window.addEventListener('scroll', textTabAnimated);
+window.addEventListener('scroll', homeImageAnimated);
