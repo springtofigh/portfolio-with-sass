@@ -27,6 +27,22 @@ const swiper = new Swiper(".swiper", {
     },
     // when window width is >= 768px
     768: {
+      slidesPerView: 2,
+      loop: true,
+      grabCursor: true,
+      centeredSlides: false,
+      slideActiveClass: "active",
+      navigation: {
+        nextEl: ".next",
+        prevEl: ".prev"
+    },
+    autoplay: {
+        enabled: true,
+        delay: 5000
+    },
+    },
+    // when window width is >= 1024px
+    1024: {
       slidesPerView: 3,
       loop: true,
       grabCursor: true,
