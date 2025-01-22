@@ -141,37 +141,31 @@ const contactImgAnimated = document.getElementById('animated-section');
 const homeSectionAnimated = document.getElementById('home-img-animated');
 const animatedText = document.getElementById('project-txt-animated');
 
-function handleScroll() {
 
-  const rect = contactImgAnimated.getBoundingClientRect();
+function handleAnimation(element, animaitionClass) {
+  const rect = element.getBoundingClientRect();
   if (rect.top < window.innerHeight && rect.bottom >= 0) {
-    contactImgAnimated.classList.add('animate');
+    element.classList.add(animaitionClass);
   } else {
-    contactImgAnimated.classList.remove('animate');
+    element.classList.remove(animaitionClass);
   }
 }
 
-function homeImageAnimated() {
-  const rect = homeSectionAnimated.getBoundingClientRect();
-  if (rect.top < window.innerHeight && rect.bottom >= 0) {
-    homeSectionAnimated.classList.add('scale-up-center');
-  } else {
-    homeSectionAnimated.classList.remove('scale-up-center');
-  }
+function homeImageScroll() {
+  handleAnimation(homeSectionAnimated, 'scale-up-center')
+}
+
+function textTabScroll() {
+  handleAnimation(animatedText, 'text-animate')
+}
+
+function contactImgScroll() {
+  handleAnimation(contactImgAnimated, 'animate')
 }
 
 
-function textTabAnimated() {
-
-  const rect = animatedText.getBoundingClientRect();
-  if (rect.top < window.innerHeight && rect.bottom >= 0) {
-    animatedText.classList.add('text-animate')
-  } else {
-    animatedText.classList.remove('text-animate')
-  }
-}
-
-
-window.addEventListener('scroll', handleScroll);
-window.addEventListener('scroll', textTabAnimated);
-window.addEventListener('scroll', homeImageAnimated);
+window.addEventListener('scroll', () => {
+  homeImageScroll();
+  textTabScroll();
+  contactImgScroll();
+});
