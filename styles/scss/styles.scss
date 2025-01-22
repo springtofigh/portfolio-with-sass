@@ -21,6 +21,11 @@ body {
     color: $textColor;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 /************ NAVBAR ************/
 .nav-container {
     width: 100%;
@@ -168,6 +173,7 @@ body {
             }
         }
         }
+
     }
 
     .logo-icon-container {
@@ -645,6 +651,7 @@ body {
             display: none;
         }
     }
+
 }
 
 /************ CONTACT ************/
@@ -782,6 +789,7 @@ body {
             }
         }
     }
+
 }
 
 /************ FOOTER ************/
