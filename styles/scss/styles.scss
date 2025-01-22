@@ -600,8 +600,9 @@ body {
                                 .overlay {
                                     position: absolute;
                                     text-align: center;
-                                    top: -100%;
+                                    bottom: -50%;
                                     left: 0;
+                                    right: 0;
                                     height: 100%;
                                     width: 100%;
                                     display: flex;
@@ -609,11 +610,12 @@ body {
                                     justify-content: center;
                                     flex-direction: column;
                                     opacity: 0;
-                                    transition: top 0.5s, opacity 0.5s;
+                                    transition: bottom 0.8s, opacity 0.8s;
+                                    padding: 10px;
                             }
 
                                 &:hover .overlay {
-                                    top: 0;
+                                    bottom: 0;
                                     opacity: 1;
                                 }
                         }
@@ -640,11 +642,6 @@ body {
         }
 
         .tab-two-text {
-            display: none;
-        }
-
-        
-        .not-show {
             display: none;
         }
     }
@@ -784,7 +781,6 @@ body {
               transform: translateY(0);
             }
         }
-
     }
 }
 
