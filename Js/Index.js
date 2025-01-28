@@ -152,36 +152,36 @@ window.onload = function() {
   imgHero.classList.add('up-down');
 };
 
-// User scroll position and play animation
-const contactImgAnimated = document.getElementById('animated-section');
-const homeSectionAnimated = document.getElementById('home-img-animated');
-const animatedText = document.getElementById('project-txt-animated');
+  // User scroll position and play animation
+  const contactImgAnimated = document.getElementById('animated-section');
+  const homeSectionAnimated = document.getElementById('home-img-animated');
+  const animatedText = document.getElementById('project-txt-animated');
 
 
-function handleAnimation(element, animaitionClass) {
-  const rect = element.getBoundingClientRect();
-  if (rect.top < window.innerHeight && rect.bottom >= 0) {
-    element.classList.add(animaitionClass);
-  } else {
-    element.classList.remove(animaitionClass);
+  function handleAnimation(element, animaitionClass) {
+    const rect = element.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom >= 0) {
+      element.classList.add(animaitionClass);
+    } else {
+      element.classList.remove(animaitionClass);
+    }
   }
-}
 
-function homeImageScroll() {
-  handleAnimation(homeSectionAnimated, 'scale-up-center')
-}
+  function homeImageScroll() {
+    handleAnimation(homeSectionAnimated, 'scale-up-center')
+  }
 
-function textTabScroll() {
-  handleAnimation(animatedText, 'text-animate')
-}
+  function textTabScroll() {
+    handleAnimation(animatedText, 'text-animate')
+  }
 
-function contactImgScroll() {
-  handleAnimation(contactImgAnimated, 'animate')
-}
+  function contactImgScroll() {
+    handleAnimation(contactImgAnimated, 'animate')
+  }
 
 
-window.addEventListener('scroll', () => {
-  homeImageScroll();
-  textTabScroll();
-  contactImgScroll();
-});
+  window.addEventListener('scroll', () => {
+    homeImageScroll();
+    textTabScroll();
+    contactImgScroll();
+  });
